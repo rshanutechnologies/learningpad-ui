@@ -41,7 +41,7 @@
 
 import ThreeDViewer from "../features/science/ThreeDViewer";
 import DrawingOverlay from "../features/modelViewer/DrawingOverlay";
-import "./ScienceLayout.css";
+import "./scienceLayout.css";
 
 function ScienceLayout({ model }) {
   if (!model) return <h2>No Model Data</h2>;
