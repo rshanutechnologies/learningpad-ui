@@ -4,7 +4,7 @@ import { FaBrain } from "react-icons/fa";
 import { FaBookOpen } from "react-icons/fa";
 import { FaMobileAlt } from "react-icons/fa";
 
-import "./products.css";
+import "./Products.css";
 
 function Products() {
   return (
