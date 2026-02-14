@@ -1,0 +1,41 @@
+.about-section {
+  background: #f4f6f9;
+  padding: 100px 0;
+}
+
+.about-box {
+  background: #e9edf2;
+  padding: 80px 100px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.about-box h2 {
+  font-size: 42px;
+  margin-bottom: 35px;
+  font-weight: 700;
+  color: #333;
+}
+
+.about-box p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  max-width: 900px;
+  margin: 0 auto 25px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-box {
+    padding: 60px 30px;
+  }
+
+  .about-box h2 {
+    font-size: 30px;
+  }
+
+  .about-box p {
+    font-size: 16px;
+  }
+}

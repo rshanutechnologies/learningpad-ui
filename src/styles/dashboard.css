@@ -1,0 +1,58 @@
+.dashboard {
+  padding: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar span {
+  font-size: 12px;
+  background: #e0f0ff;
+  padding: 4px 8px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.right {
+  display: flex;
+  gap: 10px;
+}
+
+.logout {
+  background: #ff4d4d;
+  border: none;
+  padding: 8px 14px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.selectors {
+  margin-top: 40px;
+  display: flex;
+  gap: 40px;
+}
+
+.selectors select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.cards {
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+}
+
+.card {
+  width: 250px;
+  padding: 30px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}

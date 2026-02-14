@@ -1,0 +1,110 @@
+.atag-wrapper {
+  background: #5b6572;
+  padding: 60px 0;
+  min-height: 100vh;
+}
+
+/* ===== OUTER PAGE ===== */
+.atag-page {
+  width: 85%;
+  margin: 60px auto;
+  background: #d8e6e2;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* ===== INNER PAPER ===== */
+.atag-content {
+  background: #f4efe8;
+  border: 6px solid #8fb2a9;
+  border-radius: 18px;
+  padding: 80px;
+  min-height: 650px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== TITLE ===== */
+.atag-content h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 50px;
+}
+
+/* ===== FLEX BODY ===== */
+.content-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+/* ===== TEXT ===== */
+.text-section {
+  flex: 1;
+}
+
+.text-section p {
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* ===== IMAGE ===== */
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+}
+
+/* ===== WATERMARK ===== */
+.watermark {
+  position: absolute;
+  font-size: 150px;
+  color: rgba(0, 0, 0, 0.05);
+  transform: rotate(-25deg);
+  top: 40%;
+  left: 20%;
+  pointer-events: none;
+}
+
+/* ===== COPYRIGHT ===== */
+.copyright {
+  text-align: right;
+  font-size: 14px;
+  margin-top: 60px;
+}
+
+/* ===== SPIRAL NOTEBOOK EFFECT ===== */
+.spiral {
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  top: 0;
+}
+
+.spiral.left {
+  left: -20px;
+}
+
+.spiral.right {
+  right: -20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .content-body {
+    flex-direction: column;
+  }
+
+  .image-section {
+    margin-top: 30px;
+  }
+}

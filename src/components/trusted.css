@@ -1,0 +1,72 @@
+.trusted-section {
+  background: #eef1f5;
+  padding: 100px 0;
+}
+
+.trusted-section h2 {
+  text-align: center;
+  font-size: 42px;
+}
+
+.trusted-section .subtitle {
+  text-align: center;
+  margin: 20px 0 60px;
+  color: #666;
+}
+
+.trusted-section .subtitle span {
+  color: #1e73e8;
+  font-weight: bold;
+}
+
+/* SLIDER WRAPPER */
+.logo-slider {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+/* MOVING TRACK */
+.logo-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.logo-slider:hover .logo-track {
+  animation-play-state: paused;
+}
+
+/* LOGO CARD */
+.logo-card {
+  background: #fff;
+  padding: 30px 50px;
+  margin: 0 20px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+}
+
+.logo-card img {
+  max-height: 60px;
+  object-fit: contain;
+}
+
+/* ANIMATION */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

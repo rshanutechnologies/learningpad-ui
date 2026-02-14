@@ -1,0 +1,29 @@
+.science-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #111 0%, #000 100%);
+  overflow: hidden;
+}
+
+.canvas-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.science-heading {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0d1b2a;
+  padding: 12px 28px;
+  border-radius: 12px;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  border: 1px solid #1e90ff;
+  z-index: 10;
+}
+
+

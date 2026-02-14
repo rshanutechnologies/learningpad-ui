@@ -1,0 +1,115 @@
+.contact-section {
+  background: #f4f6f9;
+  padding: 100px 0;
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* FORM CARD */
+
+.contact-form-card {
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.form-group small {
+  display: block;
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #1e73e8;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #1e73e8, #155bc4);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ADDRESS CARDS */
+
+.contact-address-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.address-card {
+  background: #e9edf2;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.address-card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.address-card p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .contact-address-grid {
+    grid-template-columns: 1fr;
+  }
+}

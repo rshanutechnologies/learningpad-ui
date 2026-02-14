@@ -1,0 +1,109 @@
+.viewer-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #111 0%, #000 80%);
+  overflow: hidden;
+  color: white;
+}
+
+/* TITLE */
+.viewer-title {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 40px;
+  border-radius: 14px;
+  border: 1px solid #2e6cff;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 22px;
+  font-weight: 600;
+  z-index: 20;
+}
+
+/* MODEL CENTER */
+.viewer-model {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  height: 70%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* DRAW BUTTON */
+.draw-btn {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #2e6cff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 25;
+}
+
+/* DRAW CANVAS */
+.draw-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+/* BOTTOM BAR */
+.viewer-bottom {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  z-index: 20;
+}
+
+.viewer-back {
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: #111;
+  border: 1px solid #2e6cff;
+  color: white;
+}
+
+.viewer-control {
+  padding: 18px 70px;
+  border-radius: 16px;
+  border: 1px solid #2e6cff;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* RIGHT SWITCH */
+.viewer-right {
+  position: absolute;
+  right: 40px;
+  bottom: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 20;
+}
+
+.viewer-switch {
+  width: 60px;
+  height: 30px;
+  background: #333;
+  border-radius: 20px;
+}
+
+
+
+

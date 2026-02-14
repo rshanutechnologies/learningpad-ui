@@ -1,0 +1,116 @@
+/* DRAW BUTTON (Blue Round Button) */
+.neo-draw-btn {
+  position: absolute;
+  left: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #2e6cff, #1c4fd8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  z-index: 30;
+  box-shadow: 0 8px 25px rgba(46,108,255,0.5);
+  transition: 0.3s ease;
+}
+
+.neo-draw-btn:hover {
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 10px 30px rgba(46,108,255,0.7);
+}
+
+/* TOOL PANEL */
+.neo-draw-panel {
+  position: absolute;
+  left: 120px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 220px;
+  padding: 18px;
+  background: rgba(18, 22, 32, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(46,108,255,0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 30;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* LABEL STYLE */
+.neo-draw-panel label {
+  font-size: 14px;
+  color: #cfd8ff;
+  font-weight: 500;
+}
+
+/* COLOR PICKER STYLE */
+.neo-draw-panel input[type="color"] {
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  outline: none;
+  align-self: center;
+}
+
+/* RANGE SLIDER */
+.neo-draw-panel input[type="range"] {
+  width: 100%;
+  appearance: none;
+  height: 6px;
+  background: #2a2f45;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* RANGE THUMB */
+.neo-draw-panel input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #2e6cff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(46,108,255,0.7);
+}
+
+.neo-draw-panel input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #2e6cff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* CLEAR BUTTON */
+.neo-draw-panel button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #111;
+  border: 1px solid #2e6cff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.neo-draw-panel button:hover {
+  background: #2e6cff;
+}
+
+/* DRAWING CANVAS */
+.neo-draw-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+}
