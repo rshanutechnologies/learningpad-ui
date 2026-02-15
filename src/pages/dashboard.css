@@ -214,3 +214,52 @@
 .topic-card:hover .image-box img {
   transform: scale(1.05);
 }
+/* 
+
+
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-logo {
+  width: 32px;      /* small logo 
+  height: 32px;
+  object-fit: contain;
+} */
+
+.logo-section {
+  display: flex;
+  flex-direction: column;   /* 🔥 stack vertically */
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.app-logo-top {
+  width: 52px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-name {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.version {
+  background: #e6efff;
+  color: #3b82f6;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}

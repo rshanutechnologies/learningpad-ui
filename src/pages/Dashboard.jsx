@@ -333,6 +333,8 @@
 import modelData from "../data/modelData";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+// import logo from "../models/logo.png";
+
 import "./dashboard.css";
 
 function Dashboard() {
@@ -386,11 +388,19 @@ function Dashboard() {
 
       {/* ===== TOP NAVBAR ===== */}
       <div className="top-navbar">
-        <div className="logo-section">
-          <h1>Neoboard</h1>
-          <span className="version">v1.3.3</span>
-        </div>
+      {/* <div className="logo-section">
+<img src="/models/logo.png" alt="logo" className="app-logo" />
+  <h1>Neoboard</h1>
+  <span className="version">v1.0.0</span>
+</div> */}
 
+<div className="logo-section">
+  <img src="/models/logo.png" alt="logo" className="app-logo-top" />
+  <div className="brand-row">
+    <h1 className="brand-name">Neoboard</h1>
+    <span className="version">v1.0.0</span>
+  </div>
+</div>
         <div className="search-box">
           <input placeholder="Search Topics / Activities" />
           <span className="shortcut">Ctrl K</span>
