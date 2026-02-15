@@ -331,7 +331,8 @@
 
 
 import modelData from "../data/modelData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import { useNavigate } from "react-router-dom";
 // import logo from "../models/logo.png";
 
@@ -382,6 +383,18 @@ function Dashboard() {
     setSelectedLesson(Object.keys(modelData[newCourse])[0]);
     setActiveTab("Topics");
   };
+const handleLogout = () => {
+  localStorage.removeItem("token");
+  navigate("/", { replace: true });
+};
+useEffect(() => {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    navigate("/", { replace: true });
+  }
+}, [navigate]);
+
+
 
   return (
     <div className="dashboard-wrapper">
@@ -410,7 +423,10 @@ function Dashboard() {
           <select className="language-select">
             <option>IN English</option>
           </select>
-          <button className="logout-btn">Logout</button>
+          <button className="logout-btn" onClick={handleLogout}>
+  Logout
+</button>
+
         </div>
       </div>
 

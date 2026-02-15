@@ -10,14 +10,20 @@ function Login({ close }) {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleLogin = () => {
-    if (username === "admin" && password === "1234") {
-      close && close();
-      navigate("/dashboard");
-    } else {
-      alert("Invalid credentials");
-    }
-  };
+ const handleLogin = () => {
+  if (username === "admin" && password === "1234") {
+
+    // ✅ Store login flag
+    localStorage.setItem("token", "loggedIn");
+
+    close && close();
+
+    navigate("/dashboard", { replace: true });
+
+  } else {
+    alert("Invalid credentials");
+  }
+};
 
   return (
     <div className="login-overlay">
