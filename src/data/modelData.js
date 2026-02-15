@@ -163,18 +163,18 @@ const modelData = {
           modelFile: "/models/nutrients.glb",
           image: "/models/Science_L1_cotains.png"
         },
-        3: {
-          heading: "Nutrients Work in Body",
-          type: "3d",
-          modelFile: "/models/body.glb",
-          image: "/images/nutrients-body.jpg"
-        },
-        4: {
-          heading: "Balanced Diet",
-          type: "3d",
-          modelFile: "/models/diet.glb",
-          image: "/images/balanced-diet.jpg"
-        }
+        // 3: {
+        //   heading: "Nutrients Work in Body",
+        //   type: "3d",
+        //   modelFile: "/models/body.glb",
+        //   image: "/images/nutrients-body.jpg"
+        // },
+        // 4: {
+        //   heading: "Balanced Diet",
+        //   type: "3d",
+        //   modelFile: "/models/diet.glb",
+        //   image: "/images/balanced-diet.jpg"
+        // }
       },
 
       activities: {

@@ -88,16 +88,16 @@ export const atAGlanceData = [
      ================= SCIENCE - L1 ===========================
   ========================================================= */
 
-  // -------- Topic 1 : Introduction --------
+// ================= TOPIC 1 =================
   {
     course: "CBSE-VI-SCIENCE-VI-A",
     lesson: "L1. Components of Food",
     type: "topic",
     id: 1,
-    title: "Introduction to Food Components",
+    title: "Introduction to Food",
     paragraphs: [
-      "Food provides energy and nutrients required for growth.",
-      "Different foods contain different nutrients."
+      "Food gives us energy to work and play.",
+      "It helps in growth and keeps our body healthy."
     ],
     image: "/models/food.jpg"
   },
@@ -107,24 +107,101 @@ export const atAGlanceData = [
     lesson: "L1. Components of Food",
     type: "topic",
     id: 1,
-    title: "Main Nutrients",
-    bullets: [
-      {
-        heading: "Carbohydrates",
-        text: "Provide energy."
-      },
-      {
-        heading: "Proteins",
-        text: "Help in body building."
-      },
-      {
-        heading: "Fats",
-        text: "Provide stored energy."
-      }
-    ]
+    title: "What Are Nutrients?",
+    paragraphs: [
+      "Food contains important substances called nutrients.",
+      "These nutrients help our body function properly."
+    ],
+    image: "/images/nutrients.jpg"
   },
 
-  // -------- Activity 1 --------
+  // ================= TOPIC 2 =================
+  {
+    course: "CBSE-VI-SCIENCE-VI-A",
+    lesson: "L1. Components of Food",
+    type: "topic",
+    id: 2,
+    title: "Food Items Contain Nutrients",
+    paragraphs: [
+      "Each dish we consume is made from one or more ingredients.",
+      "These ingredients contain essential nutrients needed by our body."
+    ],
+    image: "/models/food.jpg"
+  },
+
+  {
+    course: "CBSE-VI-SCIENCE-VI-A",
+    lesson: "L1. Components of Food",
+    type: "topic",
+    id: 2,
+    title: "Major Nutrients",
+    bullets: [
+      { heading: "Carbohydrates", text: "Provide energy." },
+      { heading: "Proteins", text: "Help in growth and repair." },
+      { heading: "Fats", text: "Store energy." },
+      { heading: "Vitamins", text: "Protect from diseases." },
+      { heading: "Minerals", text: "Keep bones and body strong." }
+    ],
+    image: "/images/major_nutrients.jpg"
+  },
+
+  // ================= TOPIC 3 =================
+  {
+    course: "CBSE-VI-SCIENCE-VI-A",
+    lesson: "L1. Components of Food",
+    type: "topic",
+    id: 3,
+    title: "How Nutrients Work in Body",
+    paragraphs: [
+      "Different nutrients perform different functions in our body.",
+      "They help in energy production, growth, and protection from diseases."
+    ],
+    image: "/images/body_nutrients.jpg"
+  },
+
+  {
+    course: "CBSE-VI-SCIENCE-VI-A",
+    lesson: "L1. Components of Food",
+    type: "topic",
+    id: 3,
+    title: "Functions of Nutrients",
+    bullets: [
+      { heading: "Energy Giving", text: "Carbohydrates and fats give energy." },
+      { heading: "Body Building", text: "Proteins help build muscles." },
+      { heading: "Protection", text: "Vitamins and minerals prevent diseases." }
+    ],
+    image: "/images/functions.jpg"
+  },
+
+  // ================= TOPIC 4 =================
+  {
+    course: "CBSE-VI-SCIENCE-VI-A",
+    lesson: "L1. Components of Food",
+    type: "topic",
+    id: 4,
+    title: "Balanced Diet",
+    paragraphs: [
+      "A balanced diet contains all nutrients in correct proportions.",
+      "It keeps our body healthy and active."
+    ],
+    image: "/models/food.jpg"
+  },
+
+  {
+    course: "CBSE-VI-SCIENCE-VI-A",
+    lesson: "L1. Components of Food",
+    type: "topic",
+    id: 4,
+    title: "Importance of Balanced Diet",
+    bullets: [
+      { heading: "Growth", text: "Helps children grow properly." },
+      { heading: "Immunity", text: "Protects against diseases." },
+      { heading: "Energy", text: "Provides energy for daily activities." }
+    ],
+    image: "/models/food.jpg"
+  },
+
+  // ================= ACTIVITY 1 =================
   {
     course: "CBSE-VI-SCIENCE-VI-A",
     lesson: "L1. Components of Food",
@@ -132,18 +209,16 @@ export const atAGlanceData = [
     id: 1,
     title: "Protein Test Experiment",
     paragraphs: [
-      "Add copper sulphate to the food sample.",
+      "Take a food sample and add copper sulphate solution.",
       "Then add sodium hydroxide solution."
     ],
     bullets: [
-      {
-        heading: "Observation",
-        text: "Violet color indicates presence of protein."
-      }
-    ]
+      { heading: "Observation", text: "Violet color shows protein is present." }
+    ],
+    image: "/images/protein_test.jpg"
   },
 
-  // -------- Activity 2 --------
+  // ================= ACTIVITY 2 =================
   {
     course: "CBSE-VI-SCIENCE-VI-A",
     lesson: "L1. Components of Food",
@@ -154,15 +229,12 @@ export const atAGlanceData = [
       "Place iodine solution on the food sample."
     ],
     bullets: [
-      {
-        heading: "Observation",
-        text: "Blue-black color shows starch is present."
-      }
-    ]
+      { heading: "Observation", text: "Blue-black color indicates starch." }
+    ],
+    image: "/images/starch_test.jpg"
   }
 
 ];
-
 
 
 

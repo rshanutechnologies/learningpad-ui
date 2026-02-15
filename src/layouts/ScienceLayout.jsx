@@ -38,12 +38,13 @@
 // }
 
 // export default ScienceLayout;
-
+import { useNavigate } from "react-router-dom";
 import ThreeDViewer from "../features/science/ThreeDViewer";
 import DrawingOverlay from "../features/modelViewer/DrawingOverlay";
 import "./scienceLayout.css";
 
 function ScienceLayout({ model }) {
+    const navigate = useNavigate();
   if (!model) return <h2>No Model Data</h2>;
 
   return (
@@ -64,7 +65,7 @@ function ScienceLayout({ model }) {
 
       {/* BOTTOM CONTROLS */}
       <div className="viewer-bottom">
-        <button className="viewer-back">← Back</button>
+        <button className="viewer-back"  onClick={() => navigate("/dashboard")}>← Back</button>
 
         <div className="viewer-player">
           ▶

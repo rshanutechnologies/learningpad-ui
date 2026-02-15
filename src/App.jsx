@@ -70,6 +70,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import ModelViewer from "./pages/ModelViewer";
 import AtAGlancePage from "./pages/AtAGlancePage";
+import BrainBustersPage from "./pages/BrainBustersPage";
 function HomePage() {
   return (
     <>
@@ -106,6 +107,8 @@ function App() {
         <Route path="/model-viewer" element={<ModelViewer />} />
        
        <Route path="/at-a-glance" element={<AtAGlancePage />} />
+       <Route path="/brain-busters" element={<BrainBustersPage />} />
+
       </Routes>
     </BrowserRouter>
   );

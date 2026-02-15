@@ -336,10 +336,12 @@ import { useNavigate } from "react-router-dom";
 import "./dashboard.css";
 
 function Dashboard() {
-  const [selectedCourse, setSelectedCourse] = useState("CBSE-VI-MATHS-VI-A");
+  const [selectedCourse, setSelectedCourse] = useState("CBSE-VI-SCIENCE-VI-A");
+
   const [selectedLesson, setSelectedLesson] = useState(
-    Object.keys(modelData["CBSE-VI-MATHS-VI-A"])[0]
-  );
+  Object.keys(modelData["CBSE-VI-SCIENCE-VI-A"])[0]
+);
+
   const [activeTab, setActiveTab] = useState("Topics");
   const navigate = useNavigate();
 
@@ -531,9 +533,28 @@ function Dashboard() {
                     At A Glance
                   </button>
 
-                  <button className="purple-btn">
-                    Brain Busters
-                  </button>
+                 <button
+  className="purple-btn"
+  onClick={() =>
+    navigate("/brain-busters", {
+      state: {
+        course: selectedCourse,
+        lesson: selectedLesson,
+        topicId:
+          activeTab === "Topics" ? item.id : undefined,
+        activityId:
+          activeTab === "Activities" ? item.id : undefined,
+        type:
+          activeTab === "Topics"
+            ? "topic"
+            : "activity"
+      }
+    })
+  }
+>
+  Brain Busters
+</button>
+
                 </div>
               )}
 
