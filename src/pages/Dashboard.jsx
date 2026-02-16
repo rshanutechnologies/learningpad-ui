@@ -496,7 +496,7 @@ const filteredItems = searchTerm.trim()
       {/* MAIN CONTENT */}
       <div className="main-content">
 
-        <h1 className="page-title">Neoboard</h1>
+        <h1 className="page-title">Wiseboard</h1>
 
         {/* SELECTOR */}
         <div className="selector-card">
@@ -516,7 +516,7 @@ const filteredItems = searchTerm.trim()
           </select>
 
           <span className="last-access">
-            Last accessed &nbsp; April 23, 2026
+            Last accessed &nbsp; Feb 16, 2026
           </span>
         </div>
 
@@ -794,7 +794,7 @@ activityId: activeTab === "Activities" ? item.id : undefined,
 
     {/* FOOTER */}
     <div className="footer">
-      Neoboard 1.0 | Powered by Wisewings | © 2026
+      Wiseboard 1.0 | Powered by Wisewings | © 2026
     </div>
 
   </div>
