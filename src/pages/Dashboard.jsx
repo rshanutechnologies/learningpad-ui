@@ -317,7 +317,13 @@ const [showSearchModal, setShowSearchModal] = useState(false);
 const [showProfileModal, setShowProfileModal] = useState(false);
 
   const lessons = Object.keys(modelData[selectedCourse]);
-  const lessonData = modelData[selectedCourse][selectedLesson];
+ const lessonData =
+  modelData[selectedCourse] &&
+  modelData[selectedCourse][selectedLesson]
+    ? modelData[selectedCourse][selectedLesson]
+    : null;
+
+
 
   const topics = lessonData?.topics
     ? Object.entries(lessonData.topics).map(([id, value]) => ({
@@ -342,7 +348,10 @@ const [showProfileModal, setShowProfileModal] = useState(false);
         image: value.image
       }))
     : [];
-
+console.log("Active Tab:", activeTab);
+console.log("Topics:", topics);
+console.log("Activities:", activities);
+console.log("Resources:", resources);
   const handleCourseChange = (e) => {
     const newCourse = e.target.value;
     setSelectedCourse(newCourse);
@@ -552,24 +561,27 @@ const filteredItems = searchTerm.trim()
 
                 {activeTab !== "Resources" && (
                   <>
-                    <button
-                      className="light-btn"
-                      onClick={() =>
-                        navigate("/at-a-glance", {
-                          state: {
-                            course: selectedCourse,
-                            lesson: selectedLesson,
-                            topicId: item.id,
-                            type:
-                              activeTab === "Topics"
-                                ? "topic"
-                                : "activity"
-                          }
-                        })
-                      }
-                    >
-                      At A Glance
-                    </button>
+                  <button
+  className="light-btn"
+  onClick={() =>
+    navigate("/at-a-glance", {
+      state: {
+        course: selectedCourse,
+        lesson: selectedLesson,
+        topicId: activeTab === "Topics" ? item.id : undefined,
+        activityId: activeTab === "Activities" ? item.id : undefined,
+        type:
+          activeTab === "Topics"
+            ? "topic"
+            : activeTab === "Activities"
+            ? "activity"
+            : "resource"
+      }
+    })
+  }
+>
+  At A Glance
+</button>
 
                     <button
                       className="purple-btn"
@@ -578,7 +590,9 @@ const filteredItems = searchTerm.trim()
                           state: {
                             course: selectedCourse,
                             lesson: selectedLesson,
-                            topicId: item.id,
+                            topicId: activeTab === "Topics" ? item.id : undefined,
+activityId: activeTab === "Activities" ? item.id : undefined,
+
                             type:
                               activeTab === "Topics"
                                 ? "topic"
@@ -592,35 +606,29 @@ const filteredItems = searchTerm.trim()
                   </>
                 )}
 
-                <button
-                  className="start-btn"
-                  onClick={() =>
-                    navigate("/model-viewer", {
-                      state: {
-                        course: selectedCourse,
-                        lesson: selectedLesson,
-                        topicId:
-                          activeTab === "Topics"
-                            ? item.id
-                            : undefined,
-                        activityId:
-                          activeTab === "Activities"
-                            ? item.id
-                            : undefined,
-                        resourceId:
-                          activeTab === "Resources"
-                            ? item.id
-                            : undefined,
-                        type:
-                          activeTab === "Topics"
-                            ? "topic"
-                            : "activity"
-                      }
-                    })
-                  }
-                >
-                  Start
-                </button>
+               <button
+  className="start-btn"
+  onClick={() =>
+    navigate("/model-viewer", {
+      state: {
+        course: selectedCourse,
+        lesson: selectedLesson,
+        topicId: activeTab === "Topics" ? item.id : undefined,
+        activityId: activeTab === "Activities" ? item.id : undefined,
+        resourceId: activeTab === "Resources" ? item.id : undefined,
+        type:
+          activeTab === "Topics"
+            ? "topic"
+            : activeTab === "Activities"
+            ? "activity"
+            : "resource"
+      }
+    })
+  }
+>
+  Start
+</button>
+
 
               </div>
             </div>
