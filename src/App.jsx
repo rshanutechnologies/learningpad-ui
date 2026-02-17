@@ -71,6 +71,8 @@ import Dashboard from "./pages/Dashboard";
 import ModelViewer from "./pages/ModelViewer";
 import AtAGlancePage from "./pages/AtAGlancePage";
 import BrainBustersPage from "./pages/BrainBustersPage";
+import CoursesPage from "./pages/CoursesPage";
+
 function HomePage() {
   return (
     <>
@@ -108,6 +110,7 @@ function App() {
        
        <Route path="/at-a-glance" element={<AtAGlancePage />} />
        <Route path="/brain-busters" element={<BrainBustersPage />} />
+      <Route path="/courses" element={<CoursesPage />} />
 
       </Routes>
     </BrowserRouter>

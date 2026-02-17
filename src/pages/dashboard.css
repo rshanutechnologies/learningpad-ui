@@ -200,13 +200,13 @@ body {
 /* CARDS */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 20px;
 }
 
 .card {
   background: white;
-  padding: 15px;
+   padding: 15px; 
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
@@ -215,6 +215,7 @@ body {
   width: 100%;
   border-radius: 12px;
   margin-bottom: 10px;
+  height: 250px;
 }
 
 .card-buttons {
@@ -488,3 +489,200 @@ body {
   from { transform: scale(0.95); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* COURSES */
+.courses-wrapper {
+  padding: 30px;
+}
+
+.courses-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.course-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+}
+
+.course-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.course-icon {
+  font-size: 24px;
+}
+
+.course-arrow {
+  font-size: 22px;
+  color: #2d6cdf;
+}
+
+/* ================= APP PAGE ================= */
+
+.apps-container {
+  padding: 40px 60px;
+}
+
+.apps-heading {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* CARD BASE */
+.app-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 35px;
+  min-height: 190px;
+  display: flex;
+  gap: 20px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* HOVER EFFECT */
+.active-card:hover {
+  border: 2px solid #2f80ed;
+  transform: translateY(-2px);
+}
+
+/* DISABLED */
+.disabled-card {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.badge {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: #d1d5db;
+  color: #4b5563;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* ICON */
+.app-icon-box {
+  width: 60px;
+  height: 60px;
+  background: #e8f1fd;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #2f80ed;
+}
+
+/* CONTENT */
+.app-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.app-content p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+
+.app-icon {
+  color: #3b82f6;   /* same blue */
+}
+
+.app-icon-box {
+  width: 70px;
+  height: 70px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+.course-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.course-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #1e88e5, #26c6da);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.course-icon img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+

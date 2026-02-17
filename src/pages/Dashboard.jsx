@@ -296,8 +296,10 @@
 import modelData from "../data/modelData";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
 //import logo from "../models/logo.png";
 import "./dashboard.css";
+
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -315,6 +317,8 @@ function Dashboard() {
   const [searchTerm, setSearchTerm] = useState("");
 const [showSearchModal, setShowSearchModal] = useState(false);
 const [showProfileModal, setShowProfileModal] = useState(false);
+const [view, setView] = useState("dashboard");
+// dashboard | courses | apps
 
   const lessons = Object.keys(modelData[selectedCourse]);
  const lessonData =
@@ -479,8 +483,21 @@ const filteredItems = searchTerm.trim()
         </div>
 
         <ul className="sidebar-menu">
-          <li className="active">Dashboard</li>
-          <li>Courses</li>
+          <li
+  className={view === "dashboard" ? "active" : ""}
+  onClick={() => setView("dashboard")}
+>
+  Dashboard
+</li>
+
+    <li
+  className={view === "courses" || view === "apps" ? "active" : ""}
+  onClick={() => setView("courses")}
+>
+  Courses
+</li>
+
+
           <li>Lessons</li>
           <li>Activities</li>
           <li>Progress</li>
@@ -494,148 +511,314 @@ const filteredItems = searchTerm.trim()
       </div>
 
       {/* MAIN CONTENT */}
-      <div className="main-content">
+     {/* MAIN CONTENT */}
+<div className="main-content">
 
-        <h1 className="page-title">Wiseboard</h1>
+  {/* ================= COURSES VIEW ================= */}
+  {/* ================= COURSES VIEW ================= */}
+{view === "courses" && (
+  <div className="courses-wrapper">
+    <h2 className="courses-title">
+      Please select a course to continue
+    </h2>
 
-        {/* SELECTOR */}
-        <div className="selector-card">
-          <select value={selectedCourse} onChange={handleCourseChange}>
-            {Object.keys(modelData).map((course) => (
-              <option key={course}>{course}</option>
-            ))}
-          </select>
+    <div className="courses-list">
+      {Object.keys(modelData).map((course) => (
+        <div
+          key={course}
+          className="course-card"
+          onClick={() => {
+            setSelectedCourse(course);
+            setView("apps");
+          }}
+        >
+          <div className="course-left">
+            <div className="course-icon">
+  <img
+    src={
+      course.includes("MATH")
+        ? "/models/math.png"
+        : course.includes("SCIENCE")
+        ? "/models/science.png"
+        : "/models/social.png"
+    }
+    alt="subject"
+  />
+</div>
 
-          <select
-            value={selectedLesson}
-            onChange={(e) => setSelectedLesson(e.target.value)}
-          >
-            {lessons.map((lesson) => (
-              <option key={lesson}>{lesson}</option>
-            ))}
-          </select>
-
-          <span className="last-access">
-            Last accessed &nbsp; Feb 16, 2026
-          </span>
-        </div>
-
-        {/* OVERVIEW */}
-        <div className="overview-card">
-          <div className="overview-stats">
-            <div>📘 {topics.length} Topics</div>
-            <div>🧪 {activities.length} Activities</div>
-            <div>📂 {resources.length} Resources</div>
+            <h3>{course}</h3>
           </div>
-
-          <div className="progress-bar">
-            <div style={{ width: "40%" }}></div>
-          </div>
-
-          <div className="progress-text">40%</div>
+          <div className="course-arrow">➜</div>
         </div>
+      ))}
+    </div>
+  </div>
+)}
 
-        {/* TABS */}
-        <div className="tabs">
-          {["Topics", "Activities", "Resources"].map((tab) => (
-            <button
-              key={tab}
-              className={activeTab === tab ? "tab active" : "tab"}
-              onClick={() => setActiveTab(tab)}
-            >
-              {tab}
-            </button>
-          ))}
+{view === "apps" && (
+  <div className="apps-container">
+    <h2 className="apps-heading">
+      Select an educational application to enhance your learning experience
+    </h2>
+
+    <div className="apps-grid">
+      {/* NeoBoard */}
+      <div
+        className="app-card active-card"
+        onClick={() => setView("dashboard")}
+      >
+        <div className="app-icon-box">
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+       stroke="#3b82f6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 2L3 7l9 5 9-5-9-5z"/>
+    <path d="M3 7v10l9 5 9-5V7"/>
+    <path d="M12 12v10"/>
+  </svg>
+</div>
+
+        <div className="app-content">
+          <h3>Wise Board</h3>
+          <p>
+            Experience learning in a whole new dimension with our interactive 3D models.
+          </p>
         </div>
-
-        {/* CARDS */}
-        <div className="card-grid">
-          {dataToRender.map((item) => (
-            <div key={item.id} className="card">
-
-              <img src={item.image} alt="" />
-
-              <h3>{item.title}</h3>
-
-              <div className="card-buttons">
-
-                {activeTab !== "Resources" && (
-                  <>
-                  <button
-  className="light-btn"
-  onClick={() =>
-    navigate("/at-a-glance", {
-      state: {
-        course: selectedCourse,
-        lesson: selectedLesson,
-        topicId: activeTab === "Topics" ? item.id : undefined,
-        activityId: activeTab === "Activities" ? item.id : undefined,
-        type:
-          activeTab === "Topics"
-            ? "topic"
-            : activeTab === "Activities"
-            ? "activity"
-            : "resource"
-      }
-    })
-  }
->
-  At A Glance
-</button>
-
-                    <button
-                      className="purple-btn"
-                      onClick={() =>
-                        navigate("/brain-busters", {
-                          state: {
-                            course: selectedCourse,
-                            lesson: selectedLesson,
-                            topicId: activeTab === "Topics" ? item.id : undefined,
-activityId: activeTab === "Activities" ? item.id : undefined,
-
-                            type:
-                              activeTab === "Topics"
-                                ? "topic"
-                                : "activity"
-                          }
-                        })
-                      }
-                    >
-                      Brain Busters
-                    </button>
-                  </>
-                )}
-
-               <button
-  className="start-btn"
-  onClick={() =>
-    navigate("/model-viewer", {
-      state: {
-        course: selectedCourse,
-        lesson: selectedLesson,
-        topicId: activeTab === "Topics" ? item.id : undefined,
-        activityId: activeTab === "Activities" ? item.id : undefined,
-        resourceId: activeTab === "Resources" ? item.id : undefined,
-        type:
-          activeTab === "Topics"
-            ? "topic"
-            : activeTab === "Activities"
-            ? "activity"
-            : "resource"
-      }
-    })
-  }
->
-  Start
-</button>
-
-
-              </div>
-            </div>
-          ))}
-        </div>
-
       </div>
+
+      {/* Eval AI */}
+      <div className="app-card disabled-card">
+        <span className="badge">DISABLED</span>
+
+        <div className="app-icon-box">
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+       stroke="#3b82f6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M9 3a4 4 0 0 0-4 4v1a3 3 0 0 0 0 6v1a4 4 0 0 0 8 0"/>
+    <path d="M15 3a4 4 0 0 1 4 4v1a3 3 0 0 1 0 6v1a4 4 0 0 1-8 0"/>
+  </svg>
+</div>
+
+        <div className="app-content">
+          <h3>Eval AI</h3>
+          <p>
+            Experience AI-driven assessment and feedback tailored to your learning needs, enhancing your educational journey.
+          </p>
+        </div>
+      </div>
+
+      {/* Assess AI */}
+      <div className="app-card disabled-card">
+        <span className="badge">DISABLED</span>
+
+       <div className="app-icon-box">
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+       stroke="#3b82f6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M14 2H6a2 2 0 0 0-2 2v16l4-4h6a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/>
+    <path d="M9 9h6"/>
+    <path d="M9 13h4"/>
+  </svg>
+</div>
+
+        <div className="app-content">
+          <h3>Assess AI</h3>
+          <p>
+            Unlock AI-powered assessment tools for creating personalized learning paths and improving student outcomes.
+          </p>
+        </div>
+      </div>
+
+      {/* Reporting */}
+      <div className="app-card disabled-card">
+        <span className="badge">DISABLED</span>
+
+        <div className="app-icon-box">
+  <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+       stroke="#3b82f6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="4" width="18" height="12" rx="2"/>
+    <path d="M8 20h8"/>
+    <path d="M12 16v4"/>
+    <path d="M7 10l3-3 2 2 4-4"/>
+  </svg>
+</div>
+
+
+        <div className="app-content">
+          <h3>Reporting and Analytics</h3>
+          <p>
+            Streamline school operations with a comprehensive management system, offering insights and analytics for data-driven decisions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
+
+
+  {/* ================= YOUR ORIGINAL DASHBOARD ================= */}
+  {view === "dashboard" && (
+    <>
+      {/* KEEP YOUR EXISTING DASHBOARD CODE BELOW EXACTLY AS IT IS */}
+
+      <h1 className="page-title">Wiseboard</h1>
+
+      {/* SELECTOR */}
+      <div className="selector-card">
+        <select value={selectedCourse} onChange={handleCourseChange}>
+          {Object.keys(modelData).map((course) => (
+            <option key={course}>{course}</option>
+          ))}
+        </select>
+
+        <select
+          value={selectedLesson}
+          onChange={(e) => setSelectedLesson(e.target.value)}
+        >
+          {lessons.map((lesson) => (
+            <option key={lesson}>{lesson}</option>
+          ))}
+        </select>
+
+        <span className="last-access">
+          Last accessed &nbsp; April 23, 2026
+        </span>
+      </div>
+
+      {/* OVERVIEW */}
+      <div className="overview-card">
+        <div className="overview-stats">
+          <div>📘 {topics.length} Topics</div>
+          <div>🧪 {activities.length} Activities</div>
+          <div>📂 {resources.length} Resources</div>
+        </div>
+
+        <div className="progress-bar">
+          <div style={{ width: "40%" }}></div>
+        </div>
+
+        <div className="progress-text">40%</div>
+      </div>
+
+      {/* TABS */}
+      <div className="tabs">
+        {["Topics", "Activities", "Resources"].map((tab) => (
+          <button
+            key={tab}
+            className={activeTab === tab ? "tab active" : "tab"}
+            onClick={() => setActiveTab(tab)}
+          >
+            {tab}
+          </button>
+        ))}
+      </div>
+
+      {/* CARDS */}
+      <div className="card-grid">
+        {dataToRender.map((item) => (
+          <div key={item.id} className="card">
+            <img src={item.image} alt="" />
+            <h3>{item.title}</h3>
+
+            {/* KEEP YOUR BUTTON CODE EXACTLY AS IT IS */}
+            {/** DO NOT MODIFY ANYTHING BELOW **/}
+
+            <div className="card-buttons">
+
+              {activeTab !== "Resources" && (
+                <>
+                  <button
+                    className="light-btn"
+                    onClick={() =>
+                      navigate("/at-a-glance", {
+                        state: {
+                          course: selectedCourse,
+                          lesson: selectedLesson,
+                          topicId:
+                            activeTab === "Topics"
+                              ? item.id
+                              : undefined,
+                          activityId:
+                            activeTab === "Activities"
+                              ? item.id
+                              : undefined,
+                          type:
+                            activeTab === "Topics"
+                              ? "topic"
+                              : "activity"
+                        }
+                      })
+                    }
+                  >
+                    At A Glance
+                  </button>
+
+                  <button
+                    className="purple-btn"
+                    onClick={() =>
+                      navigate("/brain-busters", {
+                        state: {
+                          course: selectedCourse,
+                          lesson: selectedLesson,
+                          topicId:
+                            activeTab === "Topics"
+                              ? item.id
+                              : undefined,
+                          activityId:
+                            activeTab === "Activities"
+                              ? item.id
+                              : undefined,
+                          type:
+                            activeTab === "Topics"
+                              ? "topic"
+                              : "activity"
+                        }
+                      })
+                    }
+                  >
+                    Brain Busters
+                  </button>
+                </>
+              )}
+
+              <button
+                className="start-btn"
+                onClick={() =>
+                  navigate("/model-viewer", {
+                    state: {
+                      course: selectedCourse,
+                      lesson: selectedLesson,
+                      topicId:
+                        activeTab === "Topics"
+                          ? item.id
+                          : undefined,
+                      activityId:
+                        activeTab === "Activities"
+                          ? item.id
+                          : undefined,
+                      resourceId:
+                        activeTab === "Resources"
+                          ? item.id
+                          : undefined,
+                      type:
+                        activeTab === "Topics"
+                          ? "topic"
+                          : activeTab === "Activities"
+                          ? "activity"
+                          : "resource"
+                    }
+                  })
+                }
+              >
+                Start
+              </button>
+
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  )}
+
+</div>
+
     </div>
 
 
