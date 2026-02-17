@@ -317,7 +317,7 @@ function Dashboard() {
   const [searchTerm, setSearchTerm] = useState("");
 const [showSearchModal, setShowSearchModal] = useState(false);
 const [showProfileModal, setShowProfileModal] = useState(false);
-const [view, setView] = useState("dashboard");
+const [view, setView] = useState("courses");
 // dashboard | courses | apps
 
   const lessons = Object.keys(modelData[selectedCourse]);
@@ -482,7 +482,7 @@ const filteredItems = searchTerm.trim()
           {/* <h3>Wiseboard</h3> */}
         </div>
 
-        <ul className="sidebar-menu">
+        {/* <ul className="sidebar-menu">
           <li
   className={view === "dashboard" ? "active" : ""}
   onClick={() => setView("dashboard")}
@@ -503,7 +503,50 @@ const filteredItems = searchTerm.trim()
           <li>Progress</li>
           <li>Resources</li>
           <li>Settings</li>
-        </ul>
+        </ul> */}
+
+<ul className="sidebar-menu">
+  <li
+    className={view === "dashboard" ? "active" : ""}
+    onClick={() => setView("dashboard")}
+  >
+    <img src="/models/dashboard.png" alt="" />
+    <span>Dashboard</span>
+  </li>
+
+  <li
+    className={view === "courses" || view === "apps" ? "active" : ""}
+    onClick={() => setView("courses")}
+  >
+    <img src="/models/courses.png" alt="" />
+    <span>Courses</span>
+  </li>
+
+  <li>
+    <img src="/models/lessons.png" alt="" />
+    <span>Lessons</span>
+  </li>
+
+  <li>
+    <img src="/models/activities.png" alt="" />
+    <span>Activities</span>
+  </li>
+
+  <li>
+    <img src="/models/progress.png" alt="" />
+    <span>Progress</span>
+  </li>
+
+  <li>
+    <img src="/models/resources.png" alt="" />
+    <span>Resources</span>
+  </li>
+
+  <li>
+    <img src="/models/settings.png" alt="" />
+    <span>Settings</span>
+  </li>
+</ul>
 
         <button className="logout-btn" onClick={handleLogout}>
           Logout
@@ -664,7 +707,10 @@ const filteredItems = searchTerm.trim()
       <div className="selector-card">
         <select value={selectedCourse} onChange={handleCourseChange}>
           {Object.keys(modelData).map((course) => (
-            <option key={course}>{course}</option>
+           <option key={course} value={course}>
+  📘{course}
+</option>
+
           ))}
         </select>
 
@@ -673,7 +719,10 @@ const filteredItems = searchTerm.trim()
           onChange={(e) => setSelectedLesson(e.target.value)}
         >
           {lessons.map((lesson) => (
-            <option key={lesson}>{lesson}</option>
+            <option key={lesson} value={lesson}>
+  {lesson}
+</option>
+
           ))}
         </select>
 
