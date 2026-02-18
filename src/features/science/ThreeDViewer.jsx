@@ -43,7 +43,7 @@ function Model({ url }) {
 function ThreeDViewer({ modelFile }) {
   return (
     <Canvas
-      camera={{ position: [0, 0, 8], fov: 40 }}
+      camera={{ position: [0, 0, 6], fov: 40 }}
       style={{ width: "100%", height: "100%" }}
     >
       <ambientLight intensity={1.2} />

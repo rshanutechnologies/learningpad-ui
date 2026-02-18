@@ -445,7 +445,7 @@ const filteredItems = searchTerm.trim()
     {/* GLOBAL TOP NAV */}
     <div className="global-nav">
       <div className="nav-left">
-  <img src="../models/logo.png" alt="Wisewings Logo" className="nav-logo" />
+  <img src="../models/logo1.png" alt="Wisewings Logo" className="nav-logo" />
 </div>
 
   <input
@@ -482,28 +482,7 @@ const filteredItems = searchTerm.trim()
           {/* <h3>Wiseboard</h3> */}
         </div>
 
-        {/* <ul className="sidebar-menu">
-          <li
-  className={view === "dashboard" ? "active" : ""}
-  onClick={() => setView("dashboard")}
->
-  Dashboard
-</li>
-
-    <li
-  className={view === "courses" || view === "apps" ? "active" : ""}
-  onClick={() => setView("courses")}
->
-  Courses
-</li>
-
-
-          <li>Lessons</li>
-          <li>Activities</li>
-          <li>Progress</li>
-          <li>Resources</li>
-          <li>Settings</li>
-        </ul> */}
+      
 
 <ul className="sidebar-menu">
   <li
@@ -612,7 +591,7 @@ const filteredItems = searchTerm.trim()
       >
         <div className="app-icon-box">
   <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
-       stroke="#3b82f6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+       stroke="#28C76F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
     <path d="M12 2L3 7l9 5 9-5-9-5z"/>
     <path d="M3 7v10l9 5 9-5V7"/>
     <path d="M12 12v10"/>
@@ -633,7 +612,7 @@ const filteredItems = searchTerm.trim()
 
         <div className="app-icon-box">
   <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
-       stroke="#3b82f6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+       stroke="#28C76F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
     <path d="M9 3a4 4 0 0 0-4 4v1a3 3 0 0 0 0 6v1a4 4 0 0 0 8 0"/>
     <path d="M15 3a4 4 0 0 1 4 4v1a3 3 0 0 1 0 6v1a4 4 0 0 1-8 0"/>
   </svg>
@@ -653,7 +632,7 @@ const filteredItems = searchTerm.trim()
 
        <div className="app-icon-box">
   <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
-       stroke="#3b82f6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+       stroke="#28C76F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
     <path d="M14 2H6a2 2 0 0 0-2 2v16l4-4h6a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/>
     <path d="M9 9h6"/>
     <path d="M9 13h4"/>
@@ -674,7 +653,7 @@ const filteredItems = searchTerm.trim()
 
         <div className="app-icon-box">
   <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
-       stroke="#3b82f6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+       stroke="#28C76F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
     <rect x="3" y="4" width="18" height="12" rx="2"/>
     <path d="M8 20h8"/>
     <path d="M12 16v4"/>
