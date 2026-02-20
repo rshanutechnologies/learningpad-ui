@@ -4,26 +4,26 @@ import "./testimonials.css";
 function Testimonials() {
 
   const reviews = [
-    {
-      text: "LearningPad’s AI evaluation has made grading effortless, saving time and enabling individual student attention. Highly recommended!",
-      name: "Mrs. Mounica P",
-      role: "Teacher, SVKM School"
-    },
-    {
-      text: "With the Parent App, I can track my child’s progress in real-time and see clear improvements in performance.",
-      name: "Kiran",
-      role: "Parent"
-    },
-    {
-      text: "LearningPad bridges pedagogy and technology, making it a game-changer for classroom teaching.",
-      name: "Dr. B Ebenezer",
-      role: "Principal, SVKM School"
-    },
-    {
-      text: "My school now runs smoothly with LearningPad’s ERP intelligent system, helping me make informed decisions.",
-      name: "Mr. Giri Teja",
-      role: "Chairman, MSR Public School"
-    }
+    // {
+    //   text: "LearningPad’s AI evaluation has made grading effortless, saving time and enabling individual student attention. Highly recommended!",
+    //   name: "Mrs. Mounica P",
+    //   role: "Teacher, SVKM School"
+    // },
+    // {
+    //   text: "With the Parent App, I can track my child’s progress in real-time and see clear improvements in performance.",
+    //   name: "Kiran",
+    //   role: "Parent"
+    // },
+    // {
+    //   text: "LearningPad bridges pedagogy and technology, making it a game-changer for classroom teaching.",
+    //   name: "Dr. B Ebenezer",
+    //   role: "Principal, SVKM School"
+    // },
+    // {
+    //   text: "My school now runs smoothly with LearningPad’s ERP intelligent system, helping me make informed decisions.",
+    //   name: "Mr. Giri Teja",
+    //   role: "Chairman, MSR Public School"
+    // }
   ];
 
   return (

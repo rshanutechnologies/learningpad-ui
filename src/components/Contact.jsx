@@ -47,29 +47,29 @@ function Contact() {
         </div>
 
         {/* ADDRESS CARDS */}
-        <div className="contact-address-grid">
+        {/* <div className="contact-address-grid">
 
           <div className="address-card">
-            <h3><FaMapMarkerAlt /> India</h3>
+            {/* <h3><FaMapMarkerAlt /> India</h3>
             <p>
               1st floor, Legend Platinum, Jubilee Enclave, Kondapur Village,
               Serilingampally Mandal, Hitech City, Hyderabad, RR District - 500081.
             </p>
             <p><FaPhoneAlt /> +91 (720) 710 7334</p>
-            <p><FaEnvelope /> contact@learningpadedu.com</p>
+            <p><FaEnvelope /> contact@learningpadedu.com</p> */}
           </div>
 
           <div className="address-card">
-            <h3><FaMapMarkerAlt /> USA</h3>
+            {/* <h3><FaMapMarkerAlt /> USA</h3> */}
             <p>
-              3333 Warrenville Road, Suite #200 Lisle,
-              Illinois 60532 USA
+              {/* 3333 Warrenville Road, Suite #200 Lisle,
+              Illinois 60532 USA */}
             </p>
-            <p><FaPhoneAlt /> +1 (630) 270 2250</p>
-            <p><FaEnvelope /> contact@learningpadedu.com</p>
+            {/* <p><FaPhoneAlt /> +1 (630) 270 2250</p> */}
+            {/* <p><FaEnvelope /> contact@learningpadedu.com</p> 
           </div>
 
-        </div>
+        </div> */}
 
       </div>
     </section>
