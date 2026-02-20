@@ -5,7 +5,7 @@ function Hero(){
         <div style={{flex:1}}>
           <h1 style={{fontSize:"52px",lineHeight:"1.2"}}>
             Empowering global education with 
-            <span style={{color:"#1e73e8"}}> AI-driven, immersive learning</span>
+            <span style={{color:"#28C76F"}}> AI-driven, immersive learning</span>
           </h1>
 
           <p style={{margin:"20px 0",color:"#666"}}>
@@ -15,9 +15,9 @@ function Hero(){
           <button style={{
             padding:"12px 30px",
             borderRadius:"30px",
-            border:"2px solid #1e73e8",
+            border:"2px solid #28C76F",
             background:"transparent",
-            color:"#1e73e8"
+            color:"#28C76F"
           }}>
             Request a Demo
           </button>
