@@ -232,7 +232,32 @@ export const atAGlanceData = [
       { heading: "Observation", text: "Blue-black color indicates starch." }
     ],
     image: "/images/starch_test.jpg"
-  }
+  },
+  /* =========================================================
+   ================= MATHS VII - L1 INTEGERS =================
+========================================================= */
+
+{
+  course: "CBSE-VII-MATHS-VII-A",
+  lesson: "L1. Integers",
+  type: "topic",
+  id: 1,
+  title: "01. Introduction",
+  paragraphs: [
+    "In earlier classes, you learned about whole numbers and integers.",
+    "You also learned how to do addition and subtraction of integers.",
+    "In this chapter, we study properties of addition, subtraction, multiplication, and division of integers."
+  ],
+  bullets: [
+    { heading: "Closure Property", text: "Integers are closed under addition and subtraction." },
+    { heading: "Commutative Property", text: "a + b = b + a" },
+    { heading: "Associative Property", text: "(a + b) + c = a + (b + c)" },
+    { heading: "Identity Element", text: "0 is the additive identity." },
+    { heading: "Distributive Property", text: "a × (b + c) = ab + ac" }
+  ],
+  image: "/models/math.png"
+}
+
 
 ];
 

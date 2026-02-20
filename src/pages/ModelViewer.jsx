@@ -305,9 +305,14 @@ else {
   }
 
   // Science layout
-  if (course.includes("SCIENCE")) {
-    return <ScienceLayout model={currentModel} />;
-  }
+  if (course.includes("SOCIALSCIENCE")) {
+  return <ScienceLayout model={currentModel} />;
+}
+
+if (course.includes("SCIENCE")) {
+  return <ScienceLayout model={currentModel} />;
+}
+
 
   return null;
 }

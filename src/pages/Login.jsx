@@ -28,7 +28,7 @@ function Login({ close }) {
   return (
     <div className="login-overlay">
       <div className="login-card">
-        <h2>Sign In to LearningPad</h2>
+        <h2>Sign In to WisePad</h2>
 
         {/* ROLE SWITCH */}
         <div className="role-switch">

@@ -112,6 +112,29 @@ export const brainBustersData = [
         answer: "Starch"
       }
     ]
-  }
+  },
+  /* =========================================================
+   MATHS VII - L1 INTEGERS
+========================================================= */
+
+{
+  course: "CBSE-VII-MATHS-VII-A",
+  lesson: "L1. Integers",
+  type: "topic",
+  id: 1,
+  questions: [
+    {
+      question: "Which of the following is an integer?",
+      options: ["5", "-3", "0", "All of these"],
+      answer: "All of these"
+    },
+    {
+      question: "Is zero positive or negative?",
+      options: ["Positive", "Negative", "Both", "Neither"],
+      answer: "Neither"
+    }
+  ]
+}
+
 
 ];

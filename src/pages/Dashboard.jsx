@@ -550,9 +550,11 @@ const filteredItems = searchTerm.trim()
           key={course}
           className="course-card"
           onClick={() => {
-            setSelectedCourse(course);
-            setView("apps");
-          }}
+  setSelectedCourse(course);
+  setSelectedLesson(Object.keys(modelData[course])[0]); // ⭐ FIX
+  setView("apps");
+}}
+
         >
           <div className="course-left">
             <div className="course-icon">
@@ -560,9 +562,11 @@ const filteredItems = searchTerm.trim()
     src={
       course.includes("MATH")
         ? "/models/math.png"
+        : course.includes("SOCIALSCIENCE")
+        ?"/models/science.png"
         : course.includes("SCIENCE")
         ? "/models/science.png"
-        : "/models/social.png"
+        :"/models/social.png"
     }
     alt="subject"
   />

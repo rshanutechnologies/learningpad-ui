@@ -261,7 +261,217 @@ const modelData = {
         }
       }
     }
+  },
+  "CBSE-VI-SOCIALSCIENCE-VI-A": {
+
+    "L1. Locating Places on the Earth": {
+
+      topics: {
+        1: {
+          heading: "Introduction",
+         type: "video",
+          file: "/models/SOCIAL01.mp4",
+          image: "/models/scocial_topic_intro.png"
+        },
+        2: {
+          heading: "A Map and Its Components",
+          type: "video",
+          modelFile: "/models/SOCIAL01.mp4",
+          image: "/models/Science_L1_cotains.png"
+        },
+        // 3: {
+        //   heading: "Nutrients Work in Body",
+        //   type: "3d",
+        //   modelFile: "/models/body.glb",
+        //   image: "/images/nutrients-body.jpg"
+        // },
+        // 4: {
+        //   heading: "Balanced Diet",
+        //   type: "3d",
+        //   modelFile: "/models/diet.glb",
+        //   image: "/images/balanced-diet.jpg"
+        // }
+      },
+
+      activities: {
+        1: {
+          heading: "Protein Test Experiment",
+          type: "3d",
+          modelFile: "/models/protein.glb",
+          image: "/models/Science_L1_activites_search.png"
+        },
+        2: {
+          heading: "Starch Test Activity",
+          type: "3d",
+          modelFile: "/models/starch.glb",
+          image: "/models/Science_L1_activites_starch.png"
+        }
+      },
+
+      resources: {
+        1: {
+          heading: "Understanding Food Components with Simple Tests",
+          type: "pdf",
+          file: "/resources/food_tests.pdf",
+          image: "/models/DIY.png"
+        },
+        2: {
+          heading: "Starch Test with Iodine",
+          type: "video",
+          file: "/models/SOCIAL01.mp4",
+          image: "/models/DIY.png"
+        }
+      }
+    },
+
+    "L2. Oceans and Continents": {
+
+      topics: {
+        1: {
+          heading: "Introduction",
+          type: "text",
+          image: "/images/materials-intro.jpg"
+        },
+        2: {
+          heading: "Shape of Objects",
+          type: "text",
+          image: "/images/shapes-objects.jpg"
+        },
+        3: {
+          heading: "Properties of Materials",
+          type: "text",
+          image: "/images/material-properties.jpg"
+        },
+        4: {
+          heading: "Solubility",
+          type: "text",
+          image: "/images/solubility.jpg"
+        }
+      },
+
+      activities: {
+        1: {
+          heading: "Group The Materials",
+          type: "activity",
+          image: "/images/group-materials.jpg"
+        },
+        2: {
+          heading: "Solubility Experiment",
+          type: "activity",
+          image: "/images/solubility-exp.jpg"
+        }
+      },
+
+      resources: {
+        1: {
+          heading: "Materials Classification Chart",
+          type: "pdf",
+          file: "/resources/materials_chart.pdf",
+          image: "/images/material-chart.jpg"
+        },
+        2: {
+          heading: "Solubility Table",
+          type: "pdf",
+          file: "/resources/solubility_table.pdf",
+          image: "/images/solubility-table.jpg"
+        }
+      }
+    }
+  },
+  "CBSE-VII-MATHS-VII-A": {
+
+  // =========================
+  // L1 INTEGERS
+  // =========================
+  "L1. Integers": {
+
+    topics: {
+      1: {
+        heading: "Introduction",
+        type: "integer",    // IMPORTANT
+        image: "/models/scocial_topic_intro.png",
+      },
+
+      2: {
+        heading: "Properties of Addition",
+        type: "video",
+        file: "/models/SOCIAL01.mp4",
+        image: "/models/Science_L1_cotains.png"
+      }
+    },
+
+    activities: {
+      1: {
+        heading: "Integer Simulation",
+        type: "sequence",
+        image: "/models/math.png"
+      }
+    },
+
+    resources: {
+      1: {
+        heading: "Integers Notes",
+        type: "pdf",
+        file: "/resources/food_tests.pdf",
+        image: "/models/DIY.png"
+      }
+    }
+  },
+
+  // =========================
+  // L2 FRACTIONS
+  // =========================
+  "L2. Fractions and Decimals": {
+
+    topics: {
+      1: {
+        heading: "Multiplication of Fractions",
+        type: "sequence",
+        image: "/models/math.png"
+      },
+      2: {
+        heading: "Division of Fractions",
+        type: "sequence",
+        image: "/models/math.png"
+      }
+    },
+
+    activities: {},
+    resources: {}
+  },
+
+  // =========================
+  // L3 DATA HANDLING
+  // =========================
+  "L3. Data Handling": {
+
+    topics: {
+      1: {
+        heading: "Introduction",
+        type: "sequence",
+        image: "/models/math.png"
+      },
+      2: {
+        heading: "Arithmetic Mean",
+        type: "sequence",
+        image: "/models/math.png"
+      },
+      3: {
+        heading: "Range",
+        type: "sequence",
+        image: "/models/math.png"
+      },
+      4: {
+        heading: "Mode",
+        type: "sequence",
+        image: "/models/math.png"
+      }
+    },
+
+    activities: {},
+    resources: {}
   }
+},
 };
 
 export default modelData;

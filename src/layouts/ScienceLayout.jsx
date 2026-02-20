@@ -56,9 +56,26 @@ function ScienceLayout({ model }) {
       </div>
 
       {/* FULLSCREEN MODEL */}
-      <div className="viewer-model">
-        <ThreeDViewer modelFile={model.modelFile} />
-      </div>
+    <div className="viewer-model">
+
+  {model.type === "3d" && (
+    <ThreeDViewer modelFile={model.modelFile} />
+  )}
+
+  {model.type === "video" && (
+    <video controls width="100%" height="100%">
+      <source src={model.file} type="video/mp4" />
+    </video>
+  )}
+
+  {model.type === "pdf" && (
+    <iframe src={model.file} width="100%" height="100%" />
+  )}
+
+</div>
+
+{model.type === "3d" && <DrawingOverlay />}
+
 
       {/* DRAWING UI */}
       <DrawingOverlay />
