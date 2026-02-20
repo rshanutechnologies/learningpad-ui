@@ -389,14 +389,14 @@ const modelData = {
       1: {
         heading: "Introduction",
         type: "integer",    // IMPORTANT
-        image: "/models/scocial_topic_intro.png",
+        image: "/models/Maths_VII_topics_L1_pic.png",
       },
 
       2: {
         heading: "Properties of Addition",
         type: "video",
         file: "/models/SOCIAL01.mp4",
-        image: "/models/Science_L1_cotains.png"
+        image: "/models/Maths_VII_topics_L1_2pic.png"
       }
     },
 
