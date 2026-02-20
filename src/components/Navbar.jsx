@@ -26,7 +26,7 @@ function Navbar() {
     <>
       <div className="navbar">
         <div className="container nav-flex">
-          <h3 style={{ color: "#28C76F" , fontSize:"40" }}>WisePad</h3>
+          <h3 style={{ color: "#28C76F" , fontSize:"40px" }}>WisePad</h3>
 
           <div className="nav-links">
             <a
