@@ -1,24 +1,30 @@
-/* ===== WRAPPER ===== */
+/* ================= WRAPPER ================= */
+
 .bb-wrapper {
   min-height: 100vh;
   background: #f4f6f8;
-  padding: 60px 0;
+  padding: 60px 20px;
   text-align: center;
   font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* ===== TITLE ===== */
+/* ================= TITLE ================= */
+
 .bb-wrapper h1 {
   font-size: 32px;
   margin-bottom: 40px;
   font-weight: 600;
 }
 
-/* ===== CARD ===== */
+/* ================= CARD ================= */
+
 .bb-card {
-  width: 70%;
-  margin: 0 auto;
-  background: #7b86c9; /* change color per lesson if needed */
+  width: 100%;
+  max-width: 850px;
+  background: #7b86c9;
   color: white;
   padding: 60px 80px;
   border-radius: 18px;
@@ -32,7 +38,8 @@
   transform: translateY(-4px);
 }
 
-/* QUESTION */
+/* ================= QUESTION ================= */
+
 .bb-card h2 {
   font-size: 26px;
   font-weight: 500;
@@ -40,13 +47,15 @@
   line-height: 1.6;
 }
 
-/* OPTIONS */
+/* ================= OPTIONS ================= */
+
 .bb-card p {
   font-size: 22px;
   margin: 10px 0;
 }
 
-/* ANSWER */
+/* ================= ANSWER ================= */
+
 .bb-card h3 {
   font-size: 24px;
   margin-top: 20px;
@@ -57,13 +66,14 @@
 .bb-card::after {
   content: "Tap on card to reveal the answer";
   position: absolute;
-  bottom: 20px;
-  right: 30px;
+  bottom: 18px;
+  right: 25px;
   font-size: 14px;
   opacity: 0.8;
 }
 
-/* ===== NAVIGATION ===== */
+/* ================= NAVIGATION ================= */
+
 .bb-nav {
   margin-top: 40px;
   display: flex;
@@ -92,7 +102,8 @@
   cursor: not-allowed;
 }
 
-/* GO BACK */
+/* ================= BACK BUTTON ================= */
+
 .bb-wrapper > button {
   margin-top: 40px;
   padding: 10px 25px;
@@ -101,4 +112,105 @@
   background: #222;
   color: white;
   cursor: pointer;
+}
+
+/* =================================================
+   TABLET RESPONSIVE
+================================================= */
+
+@media (max-width: 1024px) {
+
+  .bb-card {
+    padding: 45px 40px;
+  }
+
+  .bb-wrapper h1 {
+    font-size: 28px;
+  }
+
+  .bb-card h2 {
+    font-size: 22px;
+  }
+
+  .bb-card p {
+    font-size: 19px;
+  }
+}
+
+/* =================================================
+   MOBILE RESPONSIVE
+================================================= */
+
+@media (max-width: 768px) {
+
+  .bb-wrapper {
+    padding: 30px 15px;
+  }
+
+  .bb-wrapper h1 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .bb-card {
+    padding: 30px 20px;
+    border-radius: 14px;
+  }
+
+  .bb-card h2 {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .bb-card p {
+    font-size: 16px;
+  }
+
+  .bb-card h3 {
+    font-size: 18px;
+  }
+
+  .bb-card::after {
+    font-size: 11px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .bb-nav {
+    gap: 20px;
+  }
+
+  .bb-nav button {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+
+  .bb-wrapper > button {
+    width: 100%;
+    max-width: 220px;
+  }
+}
+
+/* =================================================
+   SMALL MOBILE (PHONES)
+================================================= */
+
+@media (max-width: 480px) {
+
+  .bb-card {
+    padding: 25px 15px;
+  }
+
+  .bb-card h2 {
+    font-size: 16px;
+  }
+
+  .bb-card p {
+    font-size: 15px;
+  }
+
+  .bb-card h3 {
+    font-size: 16px;
+  }
 }

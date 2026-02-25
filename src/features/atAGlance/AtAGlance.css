@@ -1,38 +1,45 @@
+/* ================= WRAPPER ================= */
+
 .atag-wrapper {
   background: #5b6572;
-  padding: 60px 0;
+  padding: 60px 15px;
   min-height: 100vh;
 }
 
-/* ===== OUTER PAGE ===== */
+/* ================= OUTER PAGE ================= */
+
 .atag-page {
-  width: 85%;
-  margin: 60px auto;
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto;
   background: #d8e6e2;
-  padding: 30px;
+  padding: 20px;
   border-radius: 8px;
   position: relative;
 }
 
-/* ===== INNER PAPER ===== */
+/* ================= INNER PAPER ================= */
+
 .atag-content {
   background: #f4efe8;
   border: 6px solid #8fb2a9;
   border-radius: 18px;
-  padding: 80px;
+  padding: 70px;
   min-height: 650px;
   position: relative;
   overflow: hidden;
 }
 
-/* ===== TITLE ===== */
+/* ================= TITLE ================= */
+
 .atag-content h2 {
   text-align: center;
   font-size: 34px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
-/* ===== FLEX BODY ===== */
+/* ================= BODY ================= */
+
 .content-body {
   display: flex;
   justify-content: space-between;
@@ -40,7 +47,8 @@
   gap: 50px;
 }
 
-/* ===== TEXT ===== */
+/* ================= TEXT ================= */
+
 .text-section {
   flex: 1;
 }
@@ -48,10 +56,11 @@
 .text-section p {
   font-size: 20px;
   line-height: 1.8;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
-/* ===== IMAGE ===== */
+/* ================= IMAGE ================= */
+
 .image-section {
   flex: 1;
   display: flex;
@@ -64,7 +73,8 @@
   border-radius: 12px;
 }
 
-/* ===== WATERMARK ===== */
+/* ================= WATERMARK ================= */
+
 .watermark {
   position: absolute;
   font-size: 150px;
@@ -73,16 +83,19 @@
   top: 40%;
   left: 20%;
   pointer-events: none;
+  user-select: none;
 }
 
-/* ===== COPYRIGHT ===== */
+/* ================= COPYRIGHT ================= */
+
 .copyright {
   text-align: right;
   font-size: 14px;
   margin-top: 60px;
 }
 
-/* ===== SPIRAL NOTEBOOK EFFECT ===== */
+/* ================= SPIRAL ================= */
+
 .spiral {
   position: absolute;
   width: 40px;
@@ -98,13 +111,139 @@
   right: -20px;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .content-body {
-    flex-direction: column;
+
+/* ================= BACK BUTTON ================= */
+
+.back-btn {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  background: #28C76F;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.25s;
+}
+
+.back-btn:hover {
+  background: #22b463;
+}
+/* =====================================================
+   ================= TABLET (≤1024px) ==================
+   ===================================================== */
+
+@media (max-width: 1024px) {
+
+  .atag-content {
+    padding: 50px;
   }
 
-  .image-section {
+  .atag-content h2 {
+    font-size: 28px;
+  }
+
+  .text-section p {
+    font-size: 18px;
+  }
+
+  .watermark {
+    font-size: 110px;
+  }
+}
+
+/* =====================================================
+   ================= MOBILE (≤768px) ===================
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+  .atag-wrapper {
+    padding: 30px 10px;
+  }
+
+  .atag-page {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .atag-content {
+    padding: 30px 20px;
+    border-width: 4px;
+  }
+
+  /* STACK CONTENT */
+  .content-body {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .atag-content h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .text-section p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .image-section img {
+    max-width: 100%;
+  }
+
+  /* Smaller watermark */
+  .watermark {
+    font-size: 70px;
+    top: 45%;
+    left: 10%;
+  }
+
+  /* Hide spirals (avoid overflow) */
+  .spiral {
+    display: none;
+  }
+
+  .copyright {
+    font-size: 12px;
     margin-top: 30px;
+    text-align: center;
+  }
+}
+
+/* =====================================================
+   ============== SMALL MOBILE (≤480px) =================
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+  .atag-content {
+    padding: 20px 15px;
+  }
+
+  .atag-content h2 {
+    font-size: 20px;
+  }
+
+  .text-section p {
+    font-size: 15px;
+  }
+
+  .watermark {
+    font-size: 55px;
+    transform: rotate(-20deg);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .back-btn {
+    top: 10px;
+    left: 10px;
+    padding: 6px 12px;
+    font-size: 13px;
   }
 }

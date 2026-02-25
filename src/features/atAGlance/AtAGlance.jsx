@@ -1,3 +1,4 @@
+import { useNavigate, useLocation } from "react-router-dom";
 import "./AtAGlance.css";
 
 function Spiral({ side }) {
@@ -23,13 +24,20 @@ function Spiral({ side }) {
 }
 
 function AtAGlance({ data }) {
-
+  const navigate = useNavigate();
+  const location = useLocation();
   if (!data || data.length === 0) {
     return <div style={{ color: "white" }}>No Data Found</div>;
   }
 
   return (
     <div className="atag-wrapper">
+       <button
+    className="back-btn"
+    onClick={() => navigate("/dashboard", { state: location.state })}
+  >
+    ← Back
+  </button>
       {data.map((page, index) => (
         <div className="atag-page" key={index}>
 
