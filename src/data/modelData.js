@@ -153,8 +153,10 @@ const modelData = {
       topics: {
         1: {
           heading: "Introduction",
-          type: "3d",
-          modelFile: "/models/SUSHI.glb",
+          //  type: "3d",
+          // modelFile: "/models/food01.glb",
+            type: "link",
+  link: "https://vrjgaming.github.io/ModelView.github.io/chair/",
           image: "/models/Science_L1_intro.png"
         },
         2: {
