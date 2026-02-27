@@ -99,6 +99,7 @@
   flex-direction: column;
   gap: 20px;
   z-index: 20;
+  display: none;
 }
 
 .viewer-switch {
