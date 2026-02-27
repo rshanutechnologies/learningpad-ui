@@ -43,7 +43,7 @@
 
 
 const modelData = {
-  "CBSE-VI-MATHS-VI-A": {
+  "CBSE-V-MATHS": {
 
     "L1. Patterns in Mathematics": {
 
@@ -52,12 +52,14 @@ const modelData = {
         1: {
           heading: "Number Sequences Explorer",
           type: "sequence",
-          image: "/images/number-sequence.jpg"
+          image: "/models/Maths_VII_topics_L1_pic.png",
+            disabled: true   // ✅ disabled
         },
         2: {
           heading: "Shape Sequences",
           type: "sequence",
-          image: "/images/shape-sequence.jpg"
+          image: "/models/Maths_VII_topics_L1_2pic.png",
+            disabled: true   // ✅ disabled
         }
       },
 
@@ -66,12 +68,14 @@ const modelData = {
         1: {
           heading: "Pattern Puzzle Activity",
           type: "game",
-          image: "/images/pattern-puzzle.jpg"
+          image: "/models/PPA.jpg",
+            disabled: true   // ✅ disabled
         },
         2: {
           heading: "Shape Matching Game",
           type: "game",
-          image: "/images/shape-matching.jpg"
+          image: "/models/SMG.jpg",
+            disabled: true   // ✅ disabled
         }
       },
 
@@ -81,13 +85,15 @@ const modelData = {
           heading: "Exploring Relationships Between Sequences",
           type: "pdf",
           file: "/resources/maths_sequences.pdf",
-          image: "/images/sequence-resource.jpg"
+          image: "/models/DIY.png",
+            disabled: true   // ✅ disabled
         },
         2: {
           heading: "Building Number Sequences",
           type: "video",
           file: "/resources/building_sequences.mp4",
-          image: "/images/building-sequence.jpg"
+           image: "/models/DIY.png",
+            disabled: true   // ✅ disabled
         }
       }
     },
@@ -98,30 +104,35 @@ const modelData = {
         1: {
           heading: "Terms and Definitions",
           type: "text",
-          image: "/images/terms.jpg"
+         image: "/models/T&D.jpg",
+            disabled: true   // ✅ disabled
         },
-        2: {
-          heading: "Angles",
-          type: "text",
-          image: "/images/angles.jpg"
-        },
-        3: {
-          heading: "Comparing Angles",
-          type: "text",
-          image: "/images/comparing-angles.jpg"
-        }
+        // 2: {
+        //   heading: "Angles",
+        //   type: "text",
+        //   image: "/images/angles.jpg",
+        //     disabled: true   // ✅ disabled
+        // },
+        // 3: {
+        //   heading: "Comparing Angles",
+        //   type: "text",
+        //   image: "/images/comparing-angles.jpg",
+        //     disabled: true   // ✅ disabled
+        // }
       },
 
       activities: {
         1: {
           heading: "Angle Drawing Activity",
           type: "activity",
-          image: "/images/angle-drawing.jpg"
+          image: "/models/ADA.jpg",
+            disabled: true   // ✅ disabled
         },
         2: {
           heading: "Measure The Angle Game",
           type: "game",
-          image: "/images/measure-angle.jpg"
+          image: "/models/MTAG.jpg",
+            disabled: true   // ✅ disabled
         }
       },
 
@@ -130,13 +141,15 @@ const modelData = {
           heading: "Types of Angles Chart",
           type: "pdf",
           file: "/resources/angles_chart.pdf",
-          image: "/images/angle-chart.jpg"
+        image: "/models/DIY.png",
+            disabled: true   // ✅ disabled
         },
         2: {
           heading: "Angle Measurement Guide",
           type: "pdf",
           file: "/resources/angle_measurement.pdf",
-          image: "/images/angle-guide.jpg"
+          image: "/models/DIY.png",
+            disabled: true   // ✅ disabled
         }
       }
     }
@@ -146,24 +159,30 @@ const modelData = {
   // ======================= SCIENCE ==========================
   // =========================================================
 
-  "CBSE-VI-SCIENCE-VI-A": {
+  "CBSE-V-SCIENCE": {
 
-    "L1. Components of Food": {
+    "L1. Heart Anatomy": {
 
       topics: {
         1: {
-          heading: "Introduction",
-          //  type: "3d",
-          // modelFile: "/models/food01.glb",
+          heading: "Heart Anatomy",
+        
             type: "link",
-  link: "https://vrjgaming.github.io/ModelView.github.io/chair/",
-          image: "/models/Science_L1_intro.png"
+   link:  "https://vrjgaming.github.io/Heart.github.io/DemoV01/",
+ 
+          image: "/models/q2-TF.png",
+
+           assessment: {
+    type: "link",
+    link: "/Grade5_chapter3/exercises/label.html"
+  }
         },
         2: {
           heading: "Food Items Contain",
           type: "3d",
           modelFile: "/models/nutrients.glb",
-          image: "/models/Science_L1_cotains.png"
+          image: "/models/Science_L1_cotains.png",
+            disabled: true   // ✅ disabled
         },
         // 3: {
         //   heading: "Nutrients Work in Body",
@@ -184,13 +203,15 @@ const modelData = {
           heading: "Protein Test Experiment",
           type: "3d",
           modelFile: "/models/protein.glb",
-          image: "/models/Science_L1_activites_search.png"
+          image: "/models/Science_L1_activites_search.png",
+           disabled: true   // ✅ disabled
         },
         2: {
           heading: "Starch Test Activity",
           type: "3d",
           modelFile: "/models/starch.glb",
-          image: "/models/Science_L1_activites_starch.png"
+          image: "/models/Science_L1_activites_starch.png",
+            disabled: true   // ✅ disabled
         }
       },
 
@@ -199,13 +220,15 @@ const modelData = {
           heading: "Understanding Food Components with Simple Tests",
           type: "pdf",
           file: "/resources/food_tests.pdf",
-          image: "/models/DIY.png"
+          image: "/models/DIY.png",
+            disabled: true   // ✅ disabled
         },
         2: {
           heading: "Starch Test with Iodine",
           type: "video",
           file: "/resources/starch_test.mp4",
-          image: "/models/DIY.png"
+          image: "/models/DIY.png",
+            disabled: true   // ✅ disabled
         }
       }
     },
@@ -215,37 +238,40 @@ const modelData = {
       topics: {
         1: {
           heading: "Introduction",
-          type: "text",
-          image: "/images/materials-intro.jpg"
+            type: "3d",
+          modelFile: "/models/SUSHI.glb",
+          image: "/models/Science_L1_intro.png",
+            disabled: true   // ✅ disabled
         },
-        2: {
-          heading: "Shape of Objects",
-          type: "text",
-          image: "/images/shapes-objects.jpg"
-        },
-        3: {
-          heading: "Properties of Materials",
-          type: "text",
-          image: "/images/material-properties.jpg"
-        },
-        4: {
-          heading: "Solubility",
-          type: "text",
-          image: "/images/solubility.jpg"
-        }
+        // 2: {
+        //   heading: "Shape of Objects",
+        //   type: "text",
+        //   image: "/images/shapes-objects.jpg"
+        // },
+        // 3: {
+        //   heading: "Properties of Materials",
+        //   type: "text",
+        //   image: "/images/material-properties.jpg"
+        // },
+        // 4: {
+        //   heading: "Solubility",
+        //   type: "text",
+        //   image: "/images/solubility.jpg"
+        // }
       },
 
       activities: {
         1: {
           heading: "Group The Materials",
           type: "activity",
-          image: "/images/group-materials.jpg"
+           image: "/models/food.jpg",
+            disabled: true   // ✅ disabled
         },
-        2: {
-          heading: "Solubility Experiment",
-          type: "activity",
-          image: "/images/solubility-exp.jpg"
-        }
+        // 2: {
+        //   heading: "Solubility Experiment",
+        //   type: "activity",
+        //   image: "/images/solubility-exp.jpg"
+        // }
       },
 
       resources: {
@@ -253,18 +279,19 @@ const modelData = {
           heading: "Materials Classification Chart",
           type: "pdf",
           file: "/resources/materials_chart.pdf",
-          image: "/images/material-chart.jpg"
+           image: "/models/DIY.png",
+            disabled: true   // ✅ disabled
         },
-        2: {
-          heading: "Solubility Table",
-          type: "pdf",
-          file: "/resources/solubility_table.pdf",
-          image: "/images/solubility-table.jpg"
-        }
+        // 2: {
+        //   heading: "Solubility Table",
+        //   type: "pdf",
+        //   file: "/resources/solubility_table.pdf",
+        //   image: "/images/solubility-table.jpg"
+        // }
       }
     }
   },
-  "CBSE-VI-SOCIALSCIENCE-VI-A": {
+  "CBSE-V-SOCIALSCIENCE": {
 
     "L1. Locating Places on the Earth": {
 
@@ -273,13 +300,15 @@ const modelData = {
           heading: "Introduction",
          type: "video",
           file: "/models/SOCIAL01.mp4",
-          image: "/models/scocial_topic_intro.png"
+          image: "/models/scocial_topic_intro.png",
+            disabled: true   // ✅ disabled
         },
         2: {
           heading: "A Map and Its Components",
           type: "video",
           modelFile: "/models/SOCIAL01.mp4",
-          image: "/models/Science_L1_cotains.png"
+          image: "/models/Science_L1_cotains.png",
+            disabled: true   // ✅ disabled
         },
         // 3: {
         //   heading: "Nutrients Work in Body",
@@ -300,14 +329,16 @@ const modelData = {
           heading: "Protein Test Experiment",
           type: "3d",
           modelFile: "/models/protein.glb",
-          image: "/models/Science_L1_activites_search.png"
+          image: "/models/Science_L1_activites_search.png",
+            disabled: true   // ✅ disabled
         },
-        2: {
-          heading: "Starch Test Activity",
-          type: "3d",
-          modelFile: "/models/starch.glb",
-          image: "/models/Science_L1_activites_starch.png"
-        }
+        // 2: {
+        //   heading: "Starch Test Activity",
+        //   type: "3d",
+        //   modelFile: "/models/starch.glb",
+        //   image: "/models/Science_L1_activites_starch.png"
+
+        // }
       },
 
       resources: {
@@ -315,13 +346,15 @@ const modelData = {
           heading: "Understanding Food Components with Simple Tests",
           type: "pdf",
           file: "/resources/food_tests.pdf",
-          image: "/models/DIY.png"
+          image: "/models/DIY.png",
+            disabled: true   // ✅ disabled
         },
         2: {
           heading: "Starch Test with Iodine",
           type: "video",
           file: "/models/SOCIAL01.mp4",
-          image: "/models/DIY.png"
+          image: "/models/DIY.png",
+            disabled: true   // ✅ disabled
         }
       }
     },
@@ -332,36 +365,38 @@ const modelData = {
         1: {
           heading: "Introduction",
           type: "text",
-          image: "/images/materials-intro.jpg"
+          image: "/models/scocial.jpg",
+            disabled: true   // ✅ disabled
         },
-        2: {
-          heading: "Shape of Objects",
-          type: "text",
-          image: "/images/shapes-objects.jpg"
-        },
-        3: {
-          heading: "Properties of Materials",
-          type: "text",
-          image: "/images/material-properties.jpg"
-        },
-        4: {
-          heading: "Solubility",
-          type: "text",
-          image: "/images/solubility.jpg"
-        }
+        // 2: {
+        //   heading: "Shape of Objects",
+        //   type: "text",
+        //   image: "/images/shapes-objects.jpg"
+        // },
+        // 3: {
+        //   heading: "Properties of Materials",
+        //   type: "text",
+        //   image: "/images/material-properties.jpg"
+        // },
+        // 4: {
+        //   heading: "Solubility",
+        //   type: "text",
+        //   image: "/images/solubility.jpg"
+        // }
       },
 
       activities: {
         1: {
           heading: "Group The Materials",
           type: "activity",
-          image: "/images/group-materials.jpg"
+           image: "/models/scocial2.jpg",
+            disabled: true   // ✅ disabled
         },
-        2: {
-          heading: "Solubility Experiment",
-          type: "activity",
-          image: "/images/solubility-exp.jpg"
-        }
+        // 2: {
+        //   heading: "Solubility Experiment",
+        //   type: "activity",
+        //   image: "/images/solubility-exp.jpg"
+        // }
       },
 
       resources: {
@@ -369,18 +404,19 @@ const modelData = {
           heading: "Materials Classification Chart",
           type: "pdf",
           file: "/resources/materials_chart.pdf",
-          image: "/images/material-chart.jpg"
+          image: "/models/DIY.png",
+            disabled: true   // ✅ disabled
         },
-        2: {
-          heading: "Solubility Table",
-          type: "pdf",
-          file: "/resources/solubility_table.pdf",
-          image: "/images/solubility-table.jpg"
-        }
+        // 2: {
+        //   heading: "Solubility Table",
+        //   type: "pdf",
+        //   file: "/resources/solubility_table.pdf",
+        //   image: "/images/solubility-table.jpg"
+        // }
       }
     }
   },
-  "CBSE-VII-MATHS-VII-A": {
+  "CBSE-V-English": {
 
   // =========================
   // L1 INTEGERS
@@ -391,22 +427,24 @@ const modelData = {
       1: {
         heading: "Introduction",
         type: "integer",    // IMPORTANT
-        image: "/models/Maths_VII_topics_L1_pic.png",
+        image: "/models/English1.png",
+          disabled: true   // ✅ disabled
       },
 
-      2: {
-        heading: "Properties of Addition",
-        type: "video",
-        file: "/models/SOCIAL01.mp4",
-        image: "/models/Maths_VII_topics_L1_2pic.png"
-      }
+      // 2: {
+      //   heading: "Properties of Addition",
+      //   type: "video",
+      //   file: "/models/SOCIAL01.mp4",
+      //   image: "/models/Maths_VII_topics_L1_2pic.png"
+      // }
     },
 
     activities: {
       1: {
         heading: "Integer Simulation",
         type: "sequence",
-        image: "/models/math.png"
+        image: "/models/english2.webp",
+          disabled: true   // ✅ disabled
       }
     },
 
@@ -415,7 +453,8 @@ const modelData = {
         heading: "Integers Notes",
         type: "pdf",
         file: "/resources/food_tests.pdf",
-        image: "/models/DIY.png"
+        image: "/models/DIY.png",
+          disabled: true   // ✅ disabled
       }
     }
   },
@@ -429,13 +468,14 @@ const modelData = {
       1: {
         heading: "Multiplication of Fractions",
         type: "sequence",
-        image: "/models/math.png"
+        image: "/models/english4.jpg",
+          disabled: true   // ✅ disabled
       },
-      2: {
-        heading: "Division of Fractions",
-        type: "sequence",
-        image: "/models/math.png"
-      }
+      // 2: {
+      //   heading: "Division of Fractions",
+      //   type: "sequence",
+      //   image: "/models/math.png"
+      // }
     },
 
     activities: {},
@@ -445,34 +485,34 @@ const modelData = {
   // =========================
   // L3 DATA HANDLING
   // =========================
-  "L3. Data Handling": {
+  // "L3. Data Handling": {
 
-    topics: {
-      1: {
-        heading: "Introduction",
-        type: "sequence",
-        image: "/models/math.png"
-      },
-      2: {
-        heading: "Arithmetic Mean",
-        type: "sequence",
-        image: "/models/math.png"
-      },
-      3: {
-        heading: "Range",
-        type: "sequence",
-        image: "/models/math.png"
-      },
-      4: {
-        heading: "Mode",
-        type: "sequence",
-        image: "/models/math.png"
-      }
-    },
+  //   topics: {
+  //     1: {
+  //       heading: "Introduction",
+  //       type: "sequence",
+  //       image: "/models/math.png"
+  //     },
+  //     2: {
+  //       heading: "Arithmetic Mean",
+  //       type: "sequence",
+  //       image: "/models/math.png"
+  //     },
+  //     3: {
+  //       heading: "Range",
+  //       type: "sequence",
+  //       image: "/models/math.png"
+  //     },
+  //     4: {
+  //       heading: "Mode",
+  //       type: "sequence",
+  //       image: "/models/math.png"
+  //     }
+  //   },
 
-    activities: {},
-    resources: {}
-  }
+  //   activities: {},
+  //   resources: {}
+  // }
 },
 };
 

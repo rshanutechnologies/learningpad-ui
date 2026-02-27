@@ -6,7 +6,7 @@ export const atAGlanceData = [
 
   // -------- Topic 1 : Number Sequences --------
   {
-    course: "CBSE-VI-MATHS-VI-A",
+    course: "CBSE-V-MATHS",
     lesson: "L1. Patterns in Mathematics",
     type: "topic",
     id: 1,
@@ -19,7 +19,7 @@ export const atAGlanceData = [
   },
 
   {
-    course: "CBSE-VI-MATHS-VI-A",
+    course: "CBSE-V-MATHS",
     lesson: "L1. Patterns in Mathematics",
     type: "topic",
     id: 1,
@@ -38,7 +38,7 @@ export const atAGlanceData = [
 
   // -------- Topic 2 : Shape Sequences --------
   {
-    course: "CBSE-VI-MATHS-VI-A",
+    course: "CBSE-V-MATHS",
     lesson: "L1. Patterns in Mathematics",
     type: "topic",
     id: 2,
@@ -55,7 +55,7 @@ export const atAGlanceData = [
   ========================================================= */
 
   {
-    course: "CBSE-VI-MATHS-VI-A",
+    course: "CBSE-V-MATHS",
     lesson: "L1. Patterns in Mathematics",
     type: "activity",
     id: 1,
@@ -73,7 +73,7 @@ export const atAGlanceData = [
   },
 
   {
-    course: "CBSE-VI-MATHS-VI-A",
+    course: "CBSE-V-MATHS",
     lesson: "L1. Patterns in Mathematics",
     type: "activity",
     id: 2,
@@ -90,20 +90,25 @@ export const atAGlanceData = [
 
 // ================= TOPIC 1 =================
   {
-    course: "CBSE-VI-SCIENCE-VI-A",
-    lesson: "L1. Components of Food",
+    course: "CBSE-V-SCIENCE",
+    lesson: "L1. Heart Anatomy",
     type: "topic",
     id: 1,
-    title: "Introduction to Food",
+    title: "Introduction of Heart Anatomy",
     paragraphs: [
-      "Food gives us energy to work and play.",
-      "It helps in growth and keeps our body healthy."
+     "The heart is a muscular organ that pumps blood throughout the body.",
+
+"It has four chambers called two atria and two ventricles.",
+
+"The heart supplies oxygen and nutrients to all body parts through blood.",
+
+"It beats continuously to keep our body alive and healthy."
     ],
-    image: "/models/food.jpg"
+    image: "/models/q2-TF.png"
   },
 
   {
-    course: "CBSE-VI-SCIENCE-VI-A",
+    course: "CBSE-V-SCIENCE",
     lesson: "L1. Components of Food",
     type: "topic",
     id: 1,
@@ -117,7 +122,7 @@ export const atAGlanceData = [
 
   // ================= TOPIC 2 =================
   {
-    course: "CBSE-VI-SCIENCE-VI-A",
+    course: "CBSE-V-SCIENCE",
     lesson: "L1. Components of Food",
     type: "topic",
     id: 2,
@@ -130,7 +135,7 @@ export const atAGlanceData = [
   },
 
   {
-    course: "CBSE-VI-SCIENCE-VI-A",
+    course: "CBSE-V-SCIENCE",
     lesson: "L1. Components of Food",
     type: "topic",
     id: 2,
@@ -147,7 +152,7 @@ export const atAGlanceData = [
 
   // ================= TOPIC 3 =================
   {
-    course: "CBSE-VI-SCIENCE-VI-A",
+    course: "CBSE-V-SCIENCE",
     lesson: "L1. Components of Food",
     type: "topic",
     id: 3,
@@ -160,7 +165,7 @@ export const atAGlanceData = [
   },
 
   {
-    course: "CBSE-VI-SCIENCE-VI-A",
+    course: "CBSE-V-SCIENCE",
     lesson: "L1. Components of Food",
     type: "topic",
     id: 3,
@@ -175,7 +180,7 @@ export const atAGlanceData = [
 
   // ================= TOPIC 4 =================
   {
-    course: "CBSE-VI-SCIENCE-VI-A",
+    course: "CBSE-V-SCIENCE",
     lesson: "L1. Components of Food",
     type: "topic",
     id: 4,
@@ -188,7 +193,7 @@ export const atAGlanceData = [
   },
 
   {
-    course: "CBSE-VI-SCIENCE-VI-A",
+    course: "CBSE-V-SCIENCE",
     lesson: "L1. Components of Food",
     type: "topic",
     id: 4,
@@ -203,7 +208,7 @@ export const atAGlanceData = [
 
   // ================= ACTIVITY 1 =================
   {
-    course: "CBSE-VI-SCIENCE-VI-A",
+    course: "CBSE-V-SCIENCE",
     lesson: "L1. Components of Food",
     type: "activity",
     id: 1,
@@ -220,7 +225,7 @@ export const atAGlanceData = [
 
   // ================= ACTIVITY 2 =================
   {
-    course: "CBSE-VI-SCIENCE-VI-A",
+    course: "CBSE-V-SCIENCE",
     lesson: "L1. Components of Food",
     type: "activity",
     id: 2,
@@ -238,7 +243,7 @@ export const atAGlanceData = [
 ========================================================= */
 
 {
-  course: "CBSE-VII-MATHS-VII-A",
+  course: "CBSE-V-MATHS",
   lesson: "L1. Integers",
   type: "topic",
   id: 1,

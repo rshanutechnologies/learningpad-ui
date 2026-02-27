@@ -245,7 +245,7 @@ body {
   border-radius: 12px;
   margin-bottom: 12px;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit: contain;
 }
 .card-buttons {
   display: flex;
@@ -1007,4 +1007,36 @@ body {
     font-size: 14px;
   }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card-image-click {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card-image-click:hover {
+  transform: scale(1.05);
 }

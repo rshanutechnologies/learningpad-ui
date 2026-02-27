@@ -69,7 +69,13 @@ function BrainBustersPage() {
         </button>
       </div>
 
-      <button onClick={() => navigate(-1)}>Go Back</button>
+     <button
+  onClick={() =>
+    navigate("/dashboard", { state: location.state })
+  }
+>
+  Go Back
+</button>
     </div>
   );
 }

@@ -127,7 +127,7 @@ import AtAGlance from "../features/atAGlance/AtAGlance";
 import BrainBuster from "../features/brainBuster/BrainBuster";
 import DrawingOverlay from "../features/modelViewer/DrawingOverlay";
 
-function MathsLayout({ model }) {
+function MathsLayout({ model, onBack }) {
 
   if (!model) return <h2>No Maths Data</h2>;
 

@@ -754,7 +754,7 @@
 
 import modelData from "../data/modelData";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 //import logo from "../models/logo.png";
 import "./dashboard.css";
@@ -764,12 +764,12 @@ function Dashboard() {
   const navigate = useNavigate();
 
   const [selectedCourse, setSelectedCourse] = useState(
-    "CBSE-VI-SCIENCE-VI-A"
+    "CBSE-V-SCIENCE"
   );
 
 
   const [selectedLesson, setSelectedLesson] = useState(
-    Object.keys(modelData["CBSE-VI-SCIENCE-VI-A"])[0]
+    Object.keys(modelData["CBSE-V-SCIENCE"])[0]
   );
 
   const [activeTab, setActiveTab] = useState("Topics");
@@ -778,6 +778,8 @@ const [showSearchModal, setShowSearchModal] = useState(false);
 const [showProfileModal, setShowProfileModal] = useState(false);
 const [view, setView] = useState("courses");
 const [sidebarOpen, setSidebarOpen] = useState(false);
+const [menuActive, setMenuActive] = useState("courses");
+const location = useLocation();
 // dashboard | courses | apps
 
   const lessons = Object.keys(modelData[selectedCourse]);
@@ -793,7 +795,9 @@ const [sidebarOpen, setSidebarOpen] = useState(false);
     ? Object.entries(lessonData.topics).map(([id, value]) => ({
         id: Number(id),
         title: value.heading,
-        image: value.image
+        image: value.image,
+              disabled: value.disabled || false   // ✅ universal
+
       }))
     : [];
 
@@ -801,7 +805,8 @@ const [sidebarOpen, setSidebarOpen] = useState(false);
     ? Object.entries(lessonData.activities).map(([id, value]) => ({
         id: Number(id),
         title: value.heading,
-        image: value.image
+        image: value.image,
+        disabled: value.disabled || false
       }))
     : [];
 
@@ -809,7 +814,8 @@ const [sidebarOpen, setSidebarOpen] = useState(false);
     ? Object.entries(lessonData.resources).map(([id, value]) => ({
         id: Number(id),
         title: value.heading,
-        image: value.image
+        image: value.image,
+        disabled: value.disabled || false
       }))
     : [];
 console.log("Active Tab:", activeTab);
@@ -835,6 +841,19 @@ console.log("Resources:", resources);
     }
   }, [navigate]);
 
+  useEffect(() => {
+  if (location.state?.from === "dashboard") {
+    setView("dashboard");
+
+    if (location.state.course) {
+      setSelectedCourse(location.state.course);
+    }
+
+    if (location.state.lesson) {
+      setSelectedLesson(location.state.lesson);
+    }
+  }
+}, [location.state]);
   const dataToRender =
     activeTab === "Topics"
       ? topics
@@ -895,8 +914,33 @@ const filteredItems = searchTerm.trim()
   : [];
 
 
+const handleStart = (item) => {
+  navigate("/model-viewer", {
+    state: {
+      course: selectedCourse,
+      lesson: selectedLesson,
+      topicId:
+        activeTab === "Topics" ? item.id : undefined,
+      activityId:
+        activeTab === "Activities" ? item.id : undefined,
+      resourceId:
+        activeTab === "Resources" ? item.id : undefined,
+      type:
+        activeTab === "Topics"
+          ? "topic"
+          : activeTab === "Activities"
+          ? "activity"
+          : "resource",
+      from: "dashboard"
+    }
+  });
+};
 
-
+useEffect(() => {
+  if (location.state?.from === "dashboard") {
+    setView("dashboard");
+  }
+}, [location.state]);
 
   return (
   <div className="app-wrapper">
@@ -960,17 +1004,24 @@ const filteredItems = searchTerm.trim()
       
 
 <ul className="sidebar-menu">
-  <li
-    className={view === "dashboard" ? "active" : ""}
-    onClick={() => setView("dashboard")}
-  >
+<li
+  className={menuActive === "dashboard" ? "active" : ""}
+  onClick={() => {
+    setView("apps");       // ✅ OPEN APPS
+      setMenuActive("dashboard");
+    setSidebarOpen(false); // optional smooth UX
+  }}
+>
     <img src="/models/dashboard.png" alt="" />
     <span>Dashboard</span>
   </li>
 
-  <li
-    className={view === "courses" || view === "apps" ? "active" : ""}
-    onClick={() => setView("courses")}
+<li
+className={menuActive === "courses" ? "active" : ""}
+    onClick={() => {setView("courses");
+        setMenuActive("courses")
+    }
+  }
   >
     <img src="/models/courses.png" alt="" />
     <span>Courses</span>
@@ -1024,10 +1075,12 @@ const filteredItems = searchTerm.trim()
         <div
           key={course}
           className="course-card"
-          onClick={() => {
+  onClick={() => {
   setSelectedCourse(course);
-  setSelectedLesson(Object.keys(modelData[course])[0]); // ⭐ FIX
-  setView("apps");
+  setSelectedLesson(Object.keys(modelData[course])[0]);
+  setActiveTab("Topics");
+  setView("dashboard");   // ✅ OPEN DASHBOARD
+  setMenuActive("courses");
 }}
 
         >
@@ -1041,6 +1094,8 @@ const filteredItems = searchTerm.trim()
         ?"/models/science.png"
         : course.includes("SCIENCE")
         ? "/models/science.png"
+         : course.includes("English")
+        ? "/models/English.png"
         :"/models/social.png"
     }
     alt="subject"
@@ -1220,8 +1275,18 @@ const filteredItems = searchTerm.trim()
       {/* CARDS */}
       <div className="card-grid">
         {dataToRender.map((item) => (
-          <div key={item.id} className="card">
-            <img src={item.image} alt="" />
+          <div
+  key={item.id}
+  className={`card ${item.disabled ? "card-disabled" : ""}`}
+>
+           <img
+  src={item.image}
+  alt=""
+  className="card-image-click"
+ onClick={() => {
+  if (!item.disabled) handleStart(item);
+}}
+/>
             <h3>{item.title}</h3>
 
             {/* KEEP YOUR BUTTON CODE EXACTLY AS IT IS */}
@@ -1234,24 +1299,16 @@ const filteredItems = searchTerm.trim()
                   <button
                     className="light-btn"
                     onClick={() =>
-                      navigate("/at-a-glance", {
-                        state: {
-                          course: selectedCourse,
-                          lesson: selectedLesson,
-                          topicId:
-                            activeTab === "Topics"
-                              ? item.id
-                              : undefined,
-                          activityId:
-                            activeTab === "Activities"
-                              ? item.id
-                              : undefined,
-                          type:
-                            activeTab === "Topics"
-                              ? "topic"
-                              : "activity"
-                        }
-                      })
+                    navigate("/at-a-glance", {
+  state: {
+    course: selectedCourse,
+    lesson: selectedLesson,
+    topicId: activeTab === "Topics" ? item.id : undefined,
+    activityId: activeTab === "Activities" ? item.id : undefined,
+    type: activeTab === "Topics" ? "topic" : "activity",
+    from: "dashboard"   // ✅ ADD THIS
+  }
+})
                     }
                   >
                     At A Glance
@@ -1275,7 +1332,8 @@ const filteredItems = searchTerm.trim()
                           type:
                             activeTab === "Topics"
                               ? "topic"
-                              : "activity"
+                              : "activity",
+                              from: "dashboard"
                         }
                       })
                     }
@@ -1285,7 +1343,7 @@ const filteredItems = searchTerm.trim()
                 </>
               )}
 
-              <button
+              {/* <button
                 className="start-btn"
                 onClick={() =>
                   navigate("/model-viewer", {
@@ -1315,7 +1373,37 @@ const filteredItems = searchTerm.trim()
                 }
               >
                 Start
-              </button>
+              </button> */}
+
+           <button
+  className="start-btn"
+  disabled={item.disabled}
+ onClick={() => {
+  if (item.disabled) return;
+
+  const lesson =
+    modelData[selectedCourse][selectedLesson];
+
+  const data =
+    activeTab === "Topics"
+      ? lesson.topics[item.id]
+      : lesson.activities[item.id];
+
+  if (!data?.assessment) {
+    alert("Assessment not available");
+    return;
+  }
+
+  navigate("/assessment-viewer", {
+    state: {
+      assessment: data.assessment,
+      heading: data.heading
+    }
+  });
+}}
+>
+  Assessment
+</button>
 
             </div>
           </div>

@@ -223,9 +223,25 @@ function ModelViewer() {
   const location = useLocation();
   const navigate = useNavigate();
 
-const { course, lesson, topicId, activityId, resourceId, type } =
-  location.state || {};
+const {
+  course,
+  lesson,
+  topicId,
+  activityId,
+  resourceId,
+  type,
+  from
+} = location.state || {};
 
+const handleBack = () => {
+  navigate("/dashboard", {
+    state: {
+      course,
+      lesson,
+      from: "dashboard"
+    }
+  });
+};
 
   // Safety check
 if (
@@ -242,7 +258,7 @@ if (
     return (
       <div style={{ padding: "50px", textAlign: "center" }}>
         <h2>Invalid Data</h2>
-        <button onClick={() => navigate(-1)}>Go Back</button>
+    <button onClick={handleBack}>Go Back</button>
       </div>
     );
   }
@@ -269,7 +285,7 @@ else if (type === "resource") {
     return (
       <div style={{ padding: "50px", textAlign: "center" }}>
         <h2>No Resource Content Found</h2>
-        <button onClick={() => navigate(-1)}>Go Back</button>
+       <button onClick={handleBack}>Go Back</button>
       </div>
     );
   }
@@ -294,20 +310,31 @@ else {
     return (
       <div style={{ padding: "50px", textAlign: "center" }}>
         <h1>No Topic Found</h1>
-        <button onClick={() => navigate(-1)}>Go Back</button>
+        <button onClick={handleBack}>Go Back</button>
       </div>
     );
   }
 
-  // Maths layout
-  if (course.includes("MATHS")) {
-    return <MathsLayout model={currentModel} />;
-  }
+  // Maths
+ if (course.includes("MATHS")) {
+  return (
+    <MathsLayout
+      model={currentModel}
+      onBack={handleBack}
+    />
+  );
+}
 
   // Science layout
-  if (course.includes("SOCIALSCIENCE")) {
-  return <ScienceLayout model={currentModel} />;
+ if (course.includes("SCIENCE")) {
+  return (
+    <ScienceLayout
+      model={currentModel}
+      onBack={handleBack}
+    />
+  );
 }
+
 
 if (course.includes("SCIENCE")) {
   return <ScienceLayout model={currentModel} />;

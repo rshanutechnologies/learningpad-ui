@@ -6,27 +6,52 @@ export const brainBustersData = [
 
   // 🔹 Topic 1 – Introduction
   {
-    course: "CBSE-VI-SCIENCE-VI-A",
-    lesson: "L1. Components of Food",
+    course: "CBSE-V-SCIENCE",
+    lesson: "L1. Heart Anatomy",
     type: "topic",
     id: 1,
     questions: [
-      {
-        question: "Which of the following is a common staple food item in Indian meals?",
-        options: ["Chapati", "Pasta", "Sushi", "Burrito"],
-        answer: "Chapati"
-      },
-      {
-        question: "Food gives us ______.",
-        options: ["Energy", "Pain", "Cold", "Darkness"],
-        answer: "Energy"
-      }
+    {
+  question: "What is the main function of the heart?",
+  options: ["To pump blood", "To digest food", "To think", "To breathe"],
+  answer: "To pump blood"
+},
+
+{
+  question: "How many chambers does the human heart have?",
+  options: ["Two", "Three", "Four", "Five"],
+  answer: "Four"
+},
+
+{
+  question: "The upper chambers of the heart are called ______.",
+  options: ["Ventricles", "Atria", "Valves", "Arteries"],
+  answer: "Atria"
+},
+
+{
+  question: "The lower chambers of the heart are called ______.",
+  options: ["Atria", "Ventricles", "Veins", "Capillaries"],
+  answer: "Ventricles"
+},
+
+{
+  question: "Which blood vessels carry blood away from the heart?",
+  options: ["Veins", "Arteries", "Capillaries", "Nerves"],
+  answer: "Arteries"
+},
+
+{
+  question: "The heart pumps oxygen-rich blood to the body through the ______.",
+  options: ["Pulmonary artery", "Aorta", "Vein", "Valve"],
+  answer: "Aorta"
+}
     ]
   },
 
   // 🔹 Topic 2 – Food Items Contain
   {
-    course: "CBSE-VI-SCIENCE-VI-A",
+    course: "CBSE-V-SCIENCE",
     lesson: "L1. Components of Food",
     type: "topic",
     id: 2,
@@ -56,7 +81,7 @@ export const brainBustersData = [
 
   // 🔹 Activity 1 – Protein Test
   {
-    course: "CBSE-VI-SCIENCE-VI-A",
+    course: "CBSE-V-SCIENCE",
     lesson: "L1. Components of Food",
     type: "activity",
     id: 1,
@@ -86,7 +111,7 @@ export const brainBustersData = [
 
   // 🔹 Activity 2 – Starch Test
   {
-    course: "CBSE-VI-SCIENCE-VI-A",
+    course: "CBSE-V-SCIENCE",
     lesson: "L1. Components of Food",
     type: "activity",
     id: 2,
@@ -118,7 +143,7 @@ export const brainBustersData = [
 ========================================================= */
 
 {
-  course: "CBSE-VII-MATHS-VII-A",
+  course: "CBSE-V-English",
   lesson: "L1. Integers",
   type: "topic",
   id: 1,

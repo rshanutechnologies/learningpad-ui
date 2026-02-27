@@ -64,7 +64,8 @@
 .viewer-bottom {
   position: absolute;
   bottom: 40px;
-  left: 50%;
+  top: -80%;
+  left: 5%;
   transform: translateX(-50%);
   display: flex;
   gap: 25px;
@@ -78,6 +79,8 @@
   background: #111;
   border: 1px solid #2e6cff;
   color: white;
+  position: relative;
+ 
 }
 
 .viewer-control {
