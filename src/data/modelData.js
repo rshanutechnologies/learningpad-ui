@@ -168,8 +168,8 @@ const modelData = {
           heading: "Heart Anatomy",
         
             type: "link",
-   link:  "https://vrjgaming.github.io/Heart.github.io/DemoV01/",
- 
+   //link:  "https://vrjgaming.github.io/Heart.github.io/DemoV01/",
+ link : "https://vrjgaming.github.io/Heart.github.io/DemoV1/",
           image: "/models/q2-TF.png",
 
            assessment: {
