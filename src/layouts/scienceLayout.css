@@ -111,4 +111,30 @@
 
 
 
+@media (max-width: 448px) {
 
+  .viewer-bottom {
+    bottom: 15px;
+    gap: 12px;
+    flex-wrap: wrap;
+    width: 95%;
+    justify-content: center;
+  }
+
+  .viewer-control {
+    padding: 12px 30px;
+    
+  }
+
+  .viewer-back {
+    padding: 10px 16px;
+    font-size: 14px;
+   margin-left: 55px;
+  }
+
+  .viewer-title {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+
+}
